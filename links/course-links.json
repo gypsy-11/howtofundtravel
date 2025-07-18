@@ -1,0 +1,95 @@
+{
+  "courseLinks": [
+    {
+      "id": "google-digital-marketing",
+      "title": "Google course on Digital Marketing",
+      "url": "https://grow.google/certificates/digital-marketing-ecommerce/",
+      "description": "(free via Coursera)",
+      "icon": "📚"
+    },
+    {
+      "id": "hubspot-certifications",
+      "title": "HubSpot Certifications",
+      "url": "https://academy.hubspot.com/certification-overview",
+      "description": "(free)",
+      "icon": "📚"
+    },
+    {
+      "id": "linkedin-digital-marketing",
+      "title": "LinkedIn Learning - Master Digital Marketing",
+      "url": "https://www.linkedin.com/learning/paths/master-digital-marketing",
+      "description": "(you'll need the paid LinkedIn subscription to access, but you can get one month free from LinkedIn)",
+      "icon": "📚"
+    },
+    {
+      "id": "systemeio-academy",
+      "title": "SystemeIO Academy",
+      "url": "https://www.systemeio.academy/",
+      "description": "($97 USD one-off cost with <a href=\"https://www.howtofund.travel/blog/fund-travel-mrr-income\">Master Resell Rights</a> - so you can resell this course for a profit if you choose)",
+      "icon": "📚"
+    },
+    {
+      "id": "the-roadmap",
+      "title": "The Roadmap",
+      "url": "https://www.howtofund.travel/the-roadmap",
+      "description": "teaches you the skills you need to set up your own online business from scratch ($497 USD one-off cost with <a href=\"https://www.howtofund.travel/blog/fund-travel-mrr-income\">Master Resell Rights</a> - so you can resell this course for a profit if you choose)",
+      "icon": "📚"
+    },
+    {
+      "id": "sixty-k-four-weeks",
+      "title": "$60K in Four Weeks",
+      "url": "https://systeme.io/f37b6249?sa=sa01190218985671ac8ea6a52385341d8b58ef4ff0",
+      "description": "Email marketing made easy",
+      "icon": "📚"
+    },
+    {
+      "id": "new-system-online-business",
+      "title": "The New System To Launch An Online Business",
+      "url": "https://systeme.io/dab9b3a9?sa=sa01190218985671ac8ea6a52385341d8b58ef4ff0",
+      "description": "Launch your online business with a proven system",
+      "icon": "📚"
+    },
+    {
+      "id": "first-1000-online",
+      "title": "How to make your first $1,000 Online",
+      "url": "https://systeme.io/2518990f?sa=sa01190218985671ac8ea6a52385341d8b58ef4ff0",
+      "description": "Step-by-step guide to your first online income",
+      "icon": "📚"
+    },
+    {
+      "id": "hundred-per-day-email",
+      "title": "How to Make $100 Per Day with Your Email List",
+      "url": "https://systeme.io/1c0aaa1e?sa=sa01190218985671ac8ea6a52385341d8b58ef4ff0",
+      "description": "Monetize your email list effectively",
+      "icon": "📚"
+    },
+    {
+      "id": "copy-that-sells",
+      "title": "How to Write Copy that Sells",
+      "url": "https://systeme.io/1eb9f302?sa=sa01190218985671ac8ea6a52385341d8b58ef4ff0",
+      "description": "Master the art of persuasive copywriting",
+      "icon": "📚"
+    },
+    {
+      "id": "launch-it-course",
+      "title": "Launch it!",
+      "url": "https://systeme.io/0bff192d?sa=sa01190218985671ac8ea6a52385341d8b58ef4ff0",
+      "description": "Create your course and sell it for up to $997 in the next 7 days",
+      "icon": "📚"
+    },
+    {
+      "id": "financial-freedom",
+      "title": "Financial Freedom For the Rest of Us",
+      "url": "https://systeme.io/61b2dc33?sa=sa01190218985671ac8ea6a52385341d8b58ef4ff0",
+      "description": "Achieve financial independence with proven strategies",
+      "icon": "📚"
+    },
+    {
+      "id": "business-coach",
+      "title": "Business Coach",
+      "url": "https://systeme.io/f87902cd?sa=sa01190218985671ac8ea6a52385341d8b58ef4ff0",
+      "description": "Turn 1h of work a week into $2,000 a month",
+      "icon": "📚"
+    }
+  ]
+}

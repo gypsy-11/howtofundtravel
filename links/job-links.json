@@ -1,0 +1,46 @@
+{
+  "remoteWorkLinks": [
+    {
+      "id": "upwork",
+      "title": "Upwork",
+      "url": "https://upwork.com",
+      "description": "A popular freelance marketplace where you can find remote work projects in various fields."
+    },
+    {
+      "id": "fiverr",
+      "title": "Fiverr",
+      "url": "https://go.fiverr.com/visit/?bta=1003851&brand=fp",
+      "description": "Similar to Upwork, Fiverr allows you to offer your skills and services to remote clients."
+    },
+    {
+      "id": "flexjobs",
+      "title": "FlexJobs",
+      "url": "https://www.flexjobs.com/",
+      "description": "A curated job board specializing in remote, work-from-home, and flexible work arrangements."
+    },
+    {
+      "id": "remote",
+      "title": "Remote.co",
+      "url": "https://remote.co/",
+      "description": "Another platform dedicated to connecting job seekers with remote work opportunities."
+    },
+    {
+      "id": "bitcoinerjobs",
+      "title": "Bitcoinerjobs.com",
+      "url": "https://bitcoinerjobs.com/",
+      "description": "This site is dedicated to jobs that are in the Bitcoin industry. It's common to receive your salary in Bitcoin from these companies."
+    },
+    {
+      "id": "cryptojobslist",
+      "title": "CryptoJobsList",
+      "url": "https://cryptojobslist.com/",
+      "description": "A site that is dedicated to jobs in the crypto industry. You could receive your salary in all kinds of cryptocurrencies here, so just be careful if you're new to crypto - it wouldn't be wise to receive your income in some brand new token that you may not be able to exchange for $$ if you need them!"
+    },
+    {
+      "id": "cryptocurrencyjobs",
+      "title": "Cryptocurrency Jobs",
+      "url": "https://cryptocurrencyjobs.co/",
+      "description": "Another great site promoting jobs in the crypto industry."
+    }
+  ]
+}

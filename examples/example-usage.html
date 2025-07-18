@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Job Links Usage</title>
+</head>
+<body>
+    <h1>Remote Work Opportunities</h1>
+    
+    <h2>All Job Links</h2>
+    <div id="all-job-links"></div>
+    
+    <h2>Only Freelance Platforms</h2>
+    <div id="freelance-job-links"></div>
+    
+    <h2>Only Crypto Job Sites</h2>
+    <div id="crypto-job-links"></div>
+    
+    <!-- Include the job links script -->
+    <script src="job-links.js"></script>
+    
+    <!-- Load the job links -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Display all job links
+            loadJobLinks('all-job-links');
+            
+            // Display only freelance platforms
+            loadJobLinks('freelance-job-links', ['upwork', 'fiverr']);
+            
+            // Display only crypto job sites
+            loadJobLinks('crypto-job-links', ['bitcoinerjobs', 'cryptojobslist', 'cryptocurrencyjobs']);
+        });
+    </script>
+    
+    <!-- Include disclaimer -->
+    <script src="include-disclaimer.js"></script>
+</body>
+</html>

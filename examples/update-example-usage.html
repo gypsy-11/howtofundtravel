@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Links Usage</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 { 
+            color: #333;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .disclaimer {
+            margin-top: 40px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <h1>How to Fund Travel Resources</h1>
+    
+    <div class="section">
+        <h2>Remote Work Opportunities</h2>
+        <div id="all-job-links"></div>
+    </div>
+    
+    <div class="section">
+        <h2>Freelance Platforms</h2>
+        <div id="freelance-job-links"></div>
+    </div>
+    
+    <div class="section">
+        <h2>Cryptocurrency Job Sites</h2>
+        <div id="crypto-job-links"></div>
+    </div>
+    
+    <div class="section">
+        <h2>Recommended Courses</h2>
+        <div id="all-course-links"></div>
+    </div>
+    
+    <div class="section">
+        <h2>Free Courses</h2>
+        <div id="free-course-links"></div>
+    </div>
+    
+    <div class="section">
+        <h2>Courses with Master Resell Rights</h2>
+        <div id="mrr-course-links"></div>
+    </div>
+    
+    <!-- Include the job and course links scripts -->
+    <script src="job-links.js"></script>
+    <script src="course-links.js"></script>
+    
+    <!-- Load all the links -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Job Links
+            loadJobLinks('all-job-links');
+            loadJobLinks('freelance-job-links', ['upwork', 'fiverr']);
+            loadJobLinks('crypto-job-links', ['bitcoinerjobs', 'cryptojobslist', 'cryptocurrencyjobs']);
+            
+            // Course Links
+            loadCourseLinks('all-course-links');
+            loadCourseLinks('free-course-links', ['google-digital-marketing', 'hubspot-certifications']);
+            loadCourseLinks('mrr-course-links', ['systemeio-academy', 'the-roadmap']);
+        });
+    </script>
+    
+    <!-- Include disclaimer -->
+    <script src="include-disclaimer.js"></script>
+</body>
+</html>

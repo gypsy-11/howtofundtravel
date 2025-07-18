@@ -1,0 +1,130 @@
+{
+  "affiliateLinks": [
+    {
+      "id": "flippa",
+      "title": "Flippa",
+      "url": "https://referral.flippa.com/rtwg3i6137lp",
+      "description": "Marketplace for buying and selling online businesses",
+      "category": "finance"
+    },
+    {
+      "id": "fiverr",
+      "title": "Fiverr",
+      "url": "https://go.fiverr.com/visit/?bta=1003851&brand=fp",
+      "description": "Freelance services marketplace",
+      "category": "finance"
+    },
+    {
+      "id": "tiger-invest",
+      "title": "Tiger Invest",
+      "url": "#",
+      "description": "Investment platform",
+      "category": "finance"
+    },
+    {
+      "id": "bitrefill",
+      "title": "Bitrefill",
+      "url": "https://www.bitrefill.com/signup?code=2wigor4n",
+      "description": "Buy gift cards with cryptocurrency",
+      "category": "crypto"
+    },
+    {
+      "id": "binance",
+      "title": "Binance",
+      "url": "https://accounts.binance.com/en/register?ref=F4W93S76",
+      "description": "Cryptocurrency exchange platform",
+      "category": "crypto"
+    },
+    {
+      "id": "valora",
+      "title": "Valora",
+      "url": "https://vlra.app/QFCC6REd5iFykXaU9",
+      "description": "Mobile payments app",
+      "category": "crypto"
+    },
+    {
+      "id": "wirex",
+      "title": "Wirex",
+      "url": "https://wirexapp.com/r/gypsyentrepreneur",
+      "description": "Digital payment platform",
+      "category": "crypto"
+    },
+    {
+      "id": "1inch",
+      "title": "1inch",
+      "url": "https://app.1inch.io/#/r/0xddD4CFa67BE707a3Ec227A272B6Cabb112166AAd",
+      "description": "DEX aggregator",
+      "category": "crypto"
+    },
+    {
+      "id": "zebedee",
+      "title": "ZEBEDEE",
+      "url": "https://zbd.gg/waitlist/9NI8PDJYA",
+      "description": "Bitcoin gaming platform",
+      "category": "crypto"
+    },
+    {
+      "id": "wise",
+      "title": "Wise (formerly TransferWise)",
+      "url": "https://wise.com/invite/i/melissaw418",
+      "description": "International money transfer service",
+      "category": "banking"
+    },
+    {
+      "id": "n26",
+      "title": "N26",
+      "url": "#",
+      "description": "Digital banking platform",
+      "category": "banking"
+    },
+    {
+      "id": "duolingo",
+      "title": "Duolingo",
+      "url": "https://invite.duolingo.com/BDHTZTB5CWWKSRYBO6UTFXTXQI",
+      "description": "Language learning platform",
+      "category": "lifestyle"
+    },
+    {
+      "id": "everand",
+      "title": "Everand/Scribd",
+      "url": "https://www.scribd.com/gi/77yk8w",
+      "description": "Digital library subscription service",
+      "category": "lifestyle"
+    },
+    {
+      "id": "estrid",
+      "title": "Estrid",
+      "url": "https://estrid.com/r/loot6287501a5fc1e",
+      "description": "Sustainable razors subscription",
+      "category": "lifestyle"
+    },
+    {
+      "id": "nuud",
+      "title": "Nuud",
+      "url": "https://prz.io/rzXLNdQt0",
+      "description": "Natural deodorant brand",
+      "category": "lifestyle"
+    },
+    {
+      "id": "siteground",
+      "title": "Siteground",
+      "url": "https://www.siteground.com/?referrer_id=7656033",
+      "description": "Web hosting service",
+      "category": "tools"
+    },
+    {
+      "id": "safetywing",
+      "title": "SafetyWing",
+      "url": "https://safetywing.com/nomad-insurance/profile?referralToken=a326e497-c7d1-4fd4-8cd7-b42fc02b6d5d",
+      "description": "Travel and health insurance for digital nomads",
+      "category": "travel"
+    },
+    {
+      "id": "roadmap-course",
+      "title": "The Roadmap Course",
+      "url": "https://www.howtofund.travel/the-roadmap",
+      "description": "Comprehensive guide to funding your travel lifestyle",
+      "category": "courses"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "bookLinks": [
+    {
+      "id": "law-of-attraction",
+      "title": "The Key to Living the Law of Attraction",
+      "author": "Jack Canfield",
+      "url": "https://www.amazon.com/Key-Living-Law-Attraction-Creating/dp/1409151638",
+      "description": "",
+      "icon": "🌸"
+    },
+    {
+      "id": "happy-pocket-money",
+      "title": "A Happy Pocket Full of Money",
+      "author": "David Cameron Gikandi",
+      "url": "https://www.everand.com/book/275244050/A-Happy-Pocket-Full-of-Money-Expanded-Study-Edition-Infinite-Wealth-and-Abundance-in-the-Here-and-Now",
+      "description": "",
+      "icon": "🌸"
+    },
+    {
+      "id": "psychology-of-money",
+      "title": "The Psychology of Money",
+      "author": "Morgan Housel",
+      "url": "https://www.everand.com/book/465738219/The-Psychology-of-Money-Timeless-lessons-on-wealth-greed-and-happiness",
+      "description": "",
+      "icon": "🌸"
+    },
+    {
+      "id": "millionaire-mind",
+      "title": "The Secrets of the Millionaire Mind",
+      "author": "T. Harv Eker",
+      "url": "https://www.everand.com/book/163646965/Secrets-of-the-Millionaire-Mind-Mastering-the-Inner-Game-of-Wealth",
+      "description": "",
+      "icon": "🌸"
+    },
+    {
+      "id": "money-master-game",
+      "title": "Money: Master the Game",
+      "author": "Tony Robbins",
+      "url": "https://www.everand.com/book/245787176/MONEY-Master-the-Game-7-Simple-Steps-to-Financial-Freedom",
+      "description": "",
+      "icon": "🌸"
+    },
+    {
+      "id": "unshakeable",
+      "title": "Unshakable",
+      "author": "Tony Robbins",
+      "url": "https://www.everand.com/book/339352691/Unshakeable-Your-Financial-Freedom-Playbook",
+      "description": "",
+      "icon": "🌸"
+    }
+  ]
+}
