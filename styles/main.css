@@ -254,7 +254,7 @@ ul {
   z-index: 100;
   background-color: var(--white);
   box-shadow: var(--shadow-sm);
-  padding: var(--space-md) 0;
+  padding: var(--space-sm) 0;
 }
 
 .main-nav {
@@ -265,24 +265,25 @@ ul {
 
 .logo {
   display: block;
-  width: 180px;
+  width: 150px;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: var(--space-lg);
+  gap: var(--space-md);
 }
 
-.nav-links a {
+.nav-links li:not(.cta-button) a {
   color: var(--dark);
   font-weight: 500;
   transition: color var(--transition-fast);
   padding: var(--space-xs) 0;
   position: relative;
+  font-size: 0.95rem;
 }
 
-.nav-links a::after {
+.nav-links li:not(.cta-button) a::after {
   content: '';
   position: absolute;
   left: 0;
@@ -293,14 +294,34 @@ ul {
   transition: width var(--transition-normal);
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
+.nav-links li:not(.cta-button) a:hover,
+.nav-links li:not(.cta-button) a:focus {
   color: var(--primary-color);
 }
 
-.nav-links a:hover::after,
-.nav-links a:focus::after {
+.nav-links li:not(.cta-button) a:hover::after,
+.nav-links li:not(.cta-button) a:focus::after {
   width: 100%;
+}
+
+/* CTA Button in Navigation */
+.cta-button {
+  margin-left: var(--space-sm);
+}
+
+.cta-button .btn {
+  padding: var(--space-xs) var(--space-lg);
+  font-size: 0.9rem;
+  border-radius: 25px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(59, 174, 160, 0.3);
+  transition: all var(--transition-normal);
+}
+
+.cta-button .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 174, 160, 0.4);
 }
 
 .mobile-menu-toggle {
@@ -797,16 +818,24 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .site-header {
+    padding: var(--space-xs) 0;
+  }
+  
+  .logo {
+    width: 130px;
+  }
+  
   .mobile-menu-toggle {
     display: block;
   }
   
   .nav-links {
     position: fixed;
-    top: 80px;
+    top: 60px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
     background-color: var(--white);
     flex-direction: column;
     justify-content: flex-start;
@@ -814,6 +843,17 @@ ul {
     transform: translateX(-100%);
     transition: transform var(--transition-normal);
     z-index: 90;
+    gap: var(--space-lg);
+  }
+  
+  .nav-links li:not(.cta-button) a {
+    font-size: 1.1rem;
+    padding: var(--space-sm) 0;
+  }
+  
+  .cta-button {
+    margin-left: 0;
+    margin-top: var(--space-md);
   }
   
   .nav-links.active {
