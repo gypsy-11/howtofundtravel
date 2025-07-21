@@ -1,1 +1,30 @@
- 
+<svg width="350" height="200" viewBox="0 0 350 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="beachGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8ED1C9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3BAEA0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Beach background -->
+  <rect width="350" height="200" fill="url(#beachGradient)"/>
+  
+  <!-- Ocean -->
+  <rect x="0" y="0" width="350" height="100" fill="#2A9D8F"/>
+  <path d="M0 80 Q87.5 70 175 80 T350 80 L350 100 L0 100 Z" fill="#3BAEA0"/>
+  
+  <!-- Beach -->
+  <rect x="0" y="100" width="350" height="100" fill="#F9C74F" opacity="0.7"/>
+  
+  <!-- Laptop on beach -->
+  <rect x="150" y="120" width="80" height="50" fill="#264653" rx="4"/>
+  <rect x="160" y="130" width="60" height="30" fill="#8ED1C9" rx="2"/>
+  
+  <!-- Palm tree -->
+  <rect x="280" y="80" width="8" height="80" fill="#264653"/>
+  <ellipse cx="284" cy="70" rx="25" ry="20" fill="#2A9D8F"/>
+  
+  <!-- Text overlay -->
+  <rect x="20" y="160" width="160" height="30" fill="rgba(255,255,255,0.9)" rx="4"/>
+  <text x="100" y="180" text-anchor="middle" fill="#264653" font-family="Arial" font-size="12" font-weight="bold">Remote Work Paradise</text>
+</svg> 

@@ -3,156 +3,74 @@
    Extends main.css with blog-specific styling
 */
 
-/* Blog Hero Section - NEW ADDITION */
+/* Blog Hero Section */
 .blog-hero {
-  padding: 4rem 0 3rem;
-  background: linear-gradient(135deg, #f8faf9 0%, #e8f4f2 100%);
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    padding: 4rem 0;
+    background: url('../images/ocean-shores-transparency.png') no-repeat center center;
+    background-size: cover;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    color: var(--dark);
 }
 
+/* Remove the dark overlay */
+/* .blog-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+} */
+
 .blog-hero-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-  max-width: 1280px;
-  margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
 }
 
 .blog-hero-text {
-  padding-right: 2rem;
+    text-align: center;
 }
 
 .blog-hero-text h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
+    color: var(--dark);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
 }
 
 .blog-hero-subtitle {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: var(--medium);
-  margin-bottom: 2rem;
-}
-
-.blog-search-container {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-.search-input-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  max-width: 500px;
-}
-
-.search-input-wrapper input {
-  width: 100%;
-  padding: 1rem 3rem 1rem 3.5rem;
-  border: 2px solid rgba(0,0,0,0.1);
-  border-radius: 50px;
-  background-color: var(--white);
-  font-size: 1rem;
-  transition: all var(--transition-fast);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-}
-
-.search-input-wrapper input:focus {
-  border-color: var(--primary-color);
-  outline: none;
-  box-shadow: 0 4px 20px rgba(59, 174, 160, 0.3);
-}
-
-.search-icon {
-  position: absolute;
-  left: 1.25rem;
-  color: var(--medium);
-  z-index: 2;
-}
-
-.search-clear {
-  position: absolute;
-  right: 1rem;
-  background: none;
-  border: none;
-  color: var(--medium);
-  cursor: pointer;
-  padding: 0.25rem;
-  border-radius: 50%;
-  transition: background-color var(--transition-fast);
-}
-
-.search-clear:hover {
-  background-color: rgba(0,0,0,0.1);
-}
-
-.blog-hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 2rem;
-}
-
-.blog-hero-image img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  transition: transform var(--transition-slow);
-}
-
-.blog-hero-image img:hover {
-  transform: scale(1.02);
-}
-
-/* Make image wider and better centered */
-@media (min-width: 1200px) {
-  .blog-hero-image img {
-    max-width: 700px;
-  }
-}
-
-@media (max-width: 992px) {
-  .blog-hero {
-    padding: 3rem 0 2rem;
-  }
-  
-  .blog-hero-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    text-align: center;
-  }
-  
-  .blog-hero-text {
-    padding-right: 0;
-  }
-  
-  .blog-hero-image {
-    padding-left: 0;
-    order: -1;
-  }
-  
-  .blog-hero-image img {
-    max-width: 500px;
-  }
+    color: var(--medium);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width: 768px) {
-  .blog-hero {
+  .blog-hero-new {
     padding: 2rem 0 1.5rem;
   }
   
-  .search-input-wrapper {
-    max-width: 100%;
+  .blog-hero-title {
+    font-size: clamp(2rem, 7vw, 2.8rem);
   }
   
-  .search-input-wrapper input {
-    padding: 0.875rem 2.5rem 0.875rem 3rem;
+  .blog-hero-description {
+    font-size: 1rem;
   }
 }
 

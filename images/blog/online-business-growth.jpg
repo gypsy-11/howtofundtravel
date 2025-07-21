@@ -1,1 +1,38 @@
- 
+<svg width="350" height="200" viewBox="0 0 350 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="350" height="200" fill="#8ED1C9"/>
+  
+  <!-- Growth chart background -->
+  <rect x="50" y="40" width="250" height="120" fill="#FFFFFF" rx="8" stroke="#264653" stroke-width="2"/>
+  
+  <!-- Chart grid -->
+  <line x1="70" y1="60" x2="280" y2="60" stroke="#F9C74F" stroke-width="1" opacity="0.3"/>
+  <line x1="70" y1="90" x2="280" y2="90" stroke="#F9C74F" stroke-width="1" opacity="0.3"/>
+  <line x1="70" y1="120" x2="280" y2="120" stroke="#F9C74F" stroke-width="1" opacity="0.3"/>
+  <line x1="70" y1="150" x2="280" y2="150" stroke="#F9C74F" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Growth line -->
+  <path d="M70 140 L120 120 L170 100 L220 80 L270 60" fill="none" stroke="#2A9D8F" stroke-width="4"/>
+  
+  <!-- Data points -->
+  <circle cx="70" cy="140" r="4" fill="#264653"/>
+  <circle cx="120" cy="120" r="4" fill="#264653"/>
+  <circle cx="170" cy="100" r="4" fill="#264653"/>
+  <circle cx="220" cy="80" r="4" fill="#264653"/>
+  <circle cx="270" cy="60" r="4" fill="#264653"/>
+  
+  <!-- Bar chart -->
+  <rect x="80" y="120" width="20" height="30" fill="#3BAEA0"/>
+  <rect x="110" y="110" width="20" height="40" fill="#3BAEA0"/>
+  <rect x="140" y="100" width="20" height="50" fill="#3BAEA0"/>
+  <rect x="170" y="85" width="20" height="65" fill="#3BAEA0"/>
+  <rect x="200" y="70" width="20" height="80" fill="#3BAEA0"/>
+  
+  <!-- Dollar signs -->
+  <text x="320" y="50" text-anchor="middle" fill="#F9C74F" font-family="Arial" font-size="24" font-weight="bold">$</text>
+  <text x="30" y="30" text-anchor="middle" fill="#F9C74F" font-family="Arial" font-size="18" font-weight="bold">$</text>
+  
+  <!-- Title -->
+  <rect x="80" y="170" width="190" height="20" fill="rgba(38, 70, 83, 0.9)" rx="4"/>
+  <text x="175" y="185" text-anchor="middle" fill="#FFFFFF" font-family="Arial" font-size="12" font-weight="bold">Business Growth Charts</text>
+</svg> 

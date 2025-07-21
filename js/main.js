@@ -4,6 +4,9 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Initialize favicon for all pages
+  initFavicon();
+  
   // Mobile Navigation Toggle
   initMobileNav();
   
@@ -208,4 +211,39 @@ function showFormMessage(form, message, type = 'success') {
       }
     }, 300);
   }, 5000);
+}
+
+/**
+ * Initialize favicon for all pages
+ * Ensures favicon is present on every page, even if not explicitly added to HTML
+ */
+function initFavicon() {
+  // Check if favicon links already exist
+  const existingFavicon = document.querySelector('link[rel="icon"]');
+  const existingAppleTouchIcon = document.querySelector('link[rel="apple-touch-icon"]');
+  
+  // Only add favicon links if they don't already exist
+  if (!existingFavicon) {
+    // Add SVG favicon
+    const svgFavicon = document.createElement('link');
+    svgFavicon.rel = 'icon';
+    svgFavicon.type = 'image/svg+xml';
+    svgFavicon.href = 'images/how-to-fund-travel-favicon.svg';
+    document.head.appendChild(svgFavicon);
+    
+    // Add PNG favicon as fallback
+    const pngFavicon = document.createElement('link');
+    pngFavicon.rel = 'icon';
+    pngFavicon.type = 'image/png';
+    pngFavicon.href = 'images/howtofundtravel-favicon.png';
+    document.head.appendChild(pngFavicon);
+  }
+  
+  if (!existingAppleTouchIcon) {
+    // Add Apple touch icon for iOS devices
+    const appleTouchIcon = document.createElement('link');
+    appleTouchIcon.rel = 'apple-touch-icon';
+    appleTouchIcon.href = 'images/howtofundtravel-favicon.png';
+    document.head.appendChild(appleTouchIcon);
+  }
 } 

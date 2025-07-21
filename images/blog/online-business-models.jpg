@@ -1,1 +1,7 @@
- 
+<svg width="380" height="220" viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
+  <rect width="380" height="220" fill="#F9C74F"/>
+  <rect x="20" y="20" width="340" height="180" fill="#F4A261" rx="8"/>
+  <text x="190" y="90" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Online Business</text>
+  <text x="190" y="120" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24">📊 💼</text>
+  <text x="190" y="150" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">Analytics Dashboard</text>
+</svg> 

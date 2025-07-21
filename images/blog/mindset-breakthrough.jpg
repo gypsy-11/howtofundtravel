@@ -1,1 +1,40 @@
- 
+<svg width="350" height="200" viewBox="0 0 350 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mindsetGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F9C74F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3BAEA0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="350" height="200" fill="url(#mindsetGradient)"/>
+  
+  <!-- Mountain silhouette -->
+  <path d="M0 120 L80 80 L150 100 L220 70 L280 90 L350 110 L350 200 L0 200 Z" fill="#264653" opacity="0.7"/>
+  
+  <!-- Person celebrating -->
+  <circle cx="175" cy="90" r="15" fill="#264653"/> <!-- Head -->
+  <rect x="170" y="105" width="10" height="30" fill="#264653"/> <!-- Body -->
+  
+  <!-- Arms raised up -->
+  <line x1="175" y1="110" x2="155" y2="95" stroke="#264653" stroke-width="4" stroke-linecap="round"/>
+  <line x1="175" y1="110" x2="195" y2="95" stroke="#264653" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Legs -->
+  <line x1="175" y1="135" x2="165" y2="155" stroke="#264653" stroke-width="4" stroke-linecap="round"/>
+  <line x1="175" y1="135" x2="185" y2="155" stroke="#264653" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Success rays -->
+  <path d="M175 90 L165 70 M175 90 L185 70 M175 90 L155 85 M175 90 L195 85" 
+        stroke="#F9C74F" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Stars -->
+  <text x="140" y="60" text-anchor="middle" fill="#F9C74F" font-family="Arial" font-size="20">★</text>
+  <text x="210" y="65" text-anchor="middle" fill="#F9C74F" font-family="Arial" font-size="16">★</text>
+  <text x="120" y="110" text-anchor="middle" fill="#F9C74F" font-family="Arial" font-size="14">★</text>
+  <text x="230" y="105" text-anchor="middle" fill="#F9C74F" font-family="Arial" font-size="18">★</text>
+  
+  <!-- Title -->
+  <rect x="80" y="170" width="190" height="20" fill="rgba(38, 70, 83, 0.9)" rx="4"/>
+  <text x="175" y="184" text-anchor="middle" fill="#FFFFFF" font-family="Arial" font-size="12" font-weight="bold">Mindset Breakthrough</text>
+</svg> 

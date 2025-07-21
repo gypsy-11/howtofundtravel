@@ -4,6 +4,9 @@
    Description: Modern, clean styling for a travel lifestyle brand
 */
 
+/* Favicon - Applied to all pages */
+@import url('data:text/css;base64,LyogRmF2aWNvbiBMaW5rcyAqLw==');
+
 /* 
    CSS Variables for consistent theming
    Based on the fresh, modern, clean brand colors
@@ -255,23 +258,28 @@ ul {
   background-color: var(--white);
   box-shadow: var(--shadow-sm);
   padding: var(--space-sm) 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: var(--space-lg);
 }
 
 .logo {
   display: block;
   width: 150px;
+  flex-shrink: 0;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-lg);
+  flex: 1;
+  justify-content: center;
 }
 
 .nav-links li:not(.cta-button) a {
@@ -302,6 +310,56 @@ ul {
 .nav-links li:not(.cta-button) a:hover::after,
 .nav-links li:not(.cta-button) a:focus::after {
   width: 100%;
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-shrink: 0;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 280px;
+  padding: var(--space-xs) var(--space-md) var(--space-xs) 2.5rem;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 25px;
+  background-color: #f8f9fa;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: var(--white);
+  box-shadow: 0 0 0 3px rgba(59, 174, 160, 0.1);
+}
+
+.search-input::placeholder {
+  color: #6c757d;
+}
+
+.search-icon {
+  position: absolute;
+  left: var(--space-sm);
+  color: #6c757d;
+  pointer-events: none;
+}
+
+.subscribe-btn {
+  padding: var(--space-xs) var(--space-lg);
+  font-size: 0.9rem;
+  border-radius: 25px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 /* CTA Button in Navigation */
@@ -361,43 +419,147 @@ ul {
 
 /* Hero Section */
 .hero {
-  padding: var(--space-xxl) 0;
-  background-color: var(--light);
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    padding: 4rem 0;
+    background: url('../images/ocean-shores-transparency.png') no-repeat center center;
+    background-size: cover;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    color: var(--dark);
 }
 
-.hero .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: var(--space-xxl);
-}
+/* Remove the dark overlay */
+/* .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+} */
 
 .hero-content {
-  max-width: 570px;
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    /* Remove card styling */
+    /* background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg); */
 }
 
-.hero-tagline {
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.hero-subtitle {
+    color: var(--dark);
+    margin-bottom: 2rem;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.hero-badge svg {
+  color: var(--primary-color);
+}
+
+.hero-new-title {
+  font-size: clamp(3rem, 7vw, 4.5rem);
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--dark);
+}
+
+.highlight-text {
+  color: var(--primary-color);
+  position: relative;
+}
+
+.hero-new-description {
   font-size: 1.25rem;
-  margin-bottom: var(--space-xl);
+  line-height: 1.6;
   color: var(--medium);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
 }
 
-.hero-cta {
+.hero-stats {
   display: flex;
-  gap: var(--space-md);
+  gap: var(--space-lg);
+  margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
-.hero-image img {
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  transition: transform var(--transition-slow);
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
 }
 
-.hero-image img:hover {
-  transform: scale(1.02);
+.stat-icon {
+  font-size: 1.5rem;
+}
+
+.stat-text {
+  font-weight: 600;
+  color: var(--dark);
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.hero-new-cta {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.cta-primary svg {
+  transition: transform var(--transition-fast);
+}
+
+.cta-primary:hover svg {
+  transform: translateX(2px);
+}
+
+.cta-secondary {
+  color: var(--dark);
+  border-color: var(--dark);
+}
+
+.cta-secondary:hover {
+  background-color: var(--dark);
+  color: var(--white);
+  border-color: var(--dark);
 }
 
 /* Story Section */
@@ -817,6 +979,34 @@ ul {
   }
 }
 
+@media (max-width: 992px) {
+  .main-nav {
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+  
+  .header-actions {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: var(--space-sm);
+  }
+  
+  .search-input {
+    width: 200px;
+  }
+  
+  .hero-stats {
+    gap: 1.5rem;
+  }
+  
+  .hero-new-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+}
+
 @media (max-width: 768px) {
   .site-header {
     padding: var(--space-xs) 0;
@@ -851,9 +1041,32 @@ ul {
     padding: var(--space-sm) 0;
   }
   
-  .cta-button {
-    margin-left: 0;
-    margin-top: var(--space-md);
+  .header-actions {
+    order: 2;
+    width: auto;
+    margin-top: 0;
+  }
+  
+  .search-container {
+    display: none;
+  }
+  
+  .hero-new {
+    padding: 3rem 0 4rem;
+  }
+  
+  .hero-new-title {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .hero-new-cta .btn {
+    width: 100%;
+    justify-content: center;
   }
   
   .nav-links.active {

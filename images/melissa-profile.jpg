@@ -1,1 +1,9 @@
- 
+<svg width="400" height="500" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="500" fill="#F8F9FA"/>
+  <circle cx="200" cy="150" r="80" fill="#3BAEA0"/>
+  <text x="200" y="160" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="40">👩</text>
+  <rect x="50" y="250" width="300" height="200" fill="#264653" rx="8"/>
+  <text x="200" y="320" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Melissa</text>
+  <text x="200" y="350" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">Founder</text>
+  <text x="200" y="380" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14">How to Fund Travel</text>
+</svg> 
