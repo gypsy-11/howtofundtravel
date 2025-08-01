@@ -18,7 +18,7 @@
       "use": "@vercel/static"
     },
     {
-      "src": "blogs/**",
+      "src": "blog/**",
       "use": "@vercel/static"
     }
   ],
@@ -28,8 +28,12 @@
       "dest": "/index.html"
     },
     {
-      "src": "/blogs",
-      "dest": "/blogs/index.html"
+      "src": "/blog",
+      "dest": "/blog/index.html"
+    },
+    {
+      "src": "/blog/",
+      "dest": "/blog/index.html"
     },
     {
       "src": "/digital-nomad-parents",
