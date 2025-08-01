@@ -7,9 +7,17 @@
 
 // Function to load and display course links
 function loadCourseLinks(container, linkIds = null) {
+  console.log('Loading course links for container:', container);
   fetch('/links/course-links.json')
-    .then(response => response.json())
+    .then(response => {
+      console.log('Course links response:', response);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
     .then(data => {
+      console.log('Course links data:', data);
       const links = data.courseLinks;
       const linksToDisplay = linkIds 
         ? links.filter(link => linkIds.includes(link.id))
@@ -20,6 +28,8 @@ function loadCourseLinks(container, linkIds = null) {
         console.error(`Container with ID "${container}" not found.`);
         return;
       }
+      
+      console.log('Found container, adding links:', linksToDisplay.length);
       
       // Add introduction text if displaying all links
       if (!linkIds && linksToDisplay.length === links.length) {

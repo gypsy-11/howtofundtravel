@@ -7,9 +7,17 @@
 
 // Function to load and display job links
 function loadJobLinks(container, linkIds = null) {
+  console.log('Loading job links for container:', container);
   fetch('/links/job-links.json')
-    .then(response => response.json())
+    .then(response => {
+      console.log('Job links response:', response);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
     .then(data => {
+      console.log('Job links data:', data);
       const links = data.remoteWorkLinks;
       const linksToDisplay = linkIds 
         ? links.filter(link => linkIds.includes(link.id))
@@ -21,6 +29,7 @@ function loadJobLinks(container, linkIds = null) {
         return;
       }
       
+      console.log('Found container, adding links:', linksToDisplay.length);
       linksToDisplay.forEach(link => {
         const linkHtml = `
           <p dir="ltr">
