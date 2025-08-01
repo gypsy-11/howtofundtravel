@@ -2,14 +2,42 @@
   "version": 2,
   "builds": [
     {
-      "src": "nomad-ai-marketing-landing.html",
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "styles/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "js/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "images/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "blogs/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/",
-      "dest": "/nomad-ai-marketing-landing.html"
+      "dest": "/index.html"
+    },
+    {
+      "src": "/blogs",
+      "dest": "/blogs/index.html"
+    },
+    {
+      "src": "/digital-nomad-parents",
+      "dest": "/digital-nomad-parents.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 } 

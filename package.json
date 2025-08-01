@@ -1,18 +1,19 @@
 {
-  "name": "nomad-ai-marketing-landing",
+  "name": "howtofundtravel",
   "version": "1.0.0",
-  "description": "AI Marketing Landing Page for Digital Nomads",
-  "main": "nomad-ai-marketing-landing.html",
+  "description": "How to Fund Travel - Location Independence for Families",
+  "main": "index.html",
   "scripts": {
     "dev": "vercel dev",
     "build": "echo 'No build step required for static HTML'",
     "deploy": "vercel --prod"
   },
   "keywords": [
-    "ai",
-    "marketing",
+    "travel",
+    "family-travel",
+    "location-independence",
     "digital-nomad",
-    "landing-page"
+    "funding-travel"
   ],
   "author": "Your Name",
   "license": "MIT"
