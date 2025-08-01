@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "mailerlite": {
+      "command": "npx",
+      "args": ["mailerlite-mcp-server"],
+      "env": {
+        "MAILERLITE_API_KEY": "your_api_key_here",
+        "LOG_LEVEL": "INFO"
+      }
+    }
+  }
+} 

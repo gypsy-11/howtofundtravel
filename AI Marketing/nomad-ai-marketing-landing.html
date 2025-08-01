@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break Free From Marketing Chaos - AI for Digital Nomads</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23fff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23fff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="300" r="100" fill="url(%23a)"/><circle cx="800" cy="200" r="150" fill="url(%23a)"/><circle cx="600" cy="700" r="120" fill="url(%23a)"/></svg>') no-repeat center center;
+            background-size: cover;
+            opacity: 0.3;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+        
+        .hero-text .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+        
+        .pain-points {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+        
+        .pain-points li {
+            padding: 12px 0;
+            font-size: 1.1rem;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .pain-points li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Signup Form */
+        .signup-form {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .signup-form h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        
+        .signup-form .urgency {
+            color: #e74c3c;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .cta-button {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .guarantee {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 16px;
+        }
+        
+        /* Problem Section */
+        .problem-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .problem-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .problem-card .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .problem-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .problem-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Trends Section */
+        .trends-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .trends-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+            align-items: stretch;
+        }
+        
+        .trend-struggle {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #667eea;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .trend-struggle:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .struggle-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .trend-struggle h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .trend-struggle p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 1rem;
+            flex-grow: 1;
+        }
+        
+        .reality-check {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+        }
+        
+        .reality-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .reality-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        /* Solution Preview */
+        .solution-preview {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .solution-preview .section-subtitle {
+            color: #f0f4ff;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            opacity: 0.95;
+            margin-bottom: 40px;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .benefit-item {
+            text-align: center;
+        }
+        
+        .benefit-item .number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ffd700;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-item p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+        
+        /* Social Proof */
+        .social-proof {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .stat-item .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #667eea;
+            display: block;
+        }
+        
+        .stat-item .stat-label {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .about-text p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .final-signup-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .signup-form {
+                padding: 30px 20px;
+            }
+            
+            .trends-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .trend-struggle {
+                padding: 25px 20px;
+            }
+            
+            .reality-check {
+                padding: 30px 20px;
+                margin-top: 30px;
+            }
+            
+            .reality-content h3 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .floating-elements::before,
+        .floating-elements::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-elements::before {
+            width: 200px;
+            height: 200px;
+            top: 20%;
+            right: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-elements::after {
+            width: 150px;
+            height: 150px;
+            bottom: 20%;
+            left: 15%;
+            animation-delay: 3s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="floating-elements"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>From Business Analysis to Content Plan in Under 1 Hour</h1>
+                    <p class="subtitle">The Complete AI Workflow That Turns Data Into High-Value Content Strategy</p>
+                    
+                    <ul class="pain-points">
+                        <li>Spending entire weekends on keyword research and competitor analysis</li>
+                        <li>Creating content that doesn't prioritize your highest-value opportunities</li>
+                        <li>Paying $200-500/month for SEO tools you barely understand</li>
+                        <li>Guessing which content will actually drive business results</li>
+                    </ul>
+                    
+                    <p style="font-size: 1.2rem; font-weight: 500; margin-bottom: 20px;">
+                        What if you could analyze your business, research keywords, and create a prioritized content plan in under 60 minutes?
+                    </p>
+                </div>
+                
+                <div class="signup-form">
+                    <h2>Join the Free Webinar</h2>
+                    <p class="urgency">⚡ Limited spots available - Date TBD</p>
+                    
+                    <form id="webinarSignup">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="business">What describes you best?</label>
+                            <select id="business" name="business" required>
+                                <option value="">Select one...</option>
+                                <option value="freelancer">Freelancer/Consultant</option>
+                                <option value="agency">Agency Owner</option>
+                                <option value="entrepreneur">Entrepreneur</option>
+                                <option value="marketer">Marketing Professional</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="cta-button">
+                            Reserve My Spot - It's FREE
+                        </button>
+                        
+                        <p class="guarantee">
+                            🔒 Your email is safe. Unsubscribe anytime.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">The Hidden Time Thief Every Nomad Faces</h2>
+            <p class="section-subtitle">
+                You became location-independent for freedom, but marketing research is stealing that freedom back, one late night in a Lisbon café at a time.
+            </p>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <span class="icon">🔍</span>
+                    <h3>Keyword Research Chaos</h3>
+                    <p>You spend hours in Ahrefs, SEMrush, and Google Keyword Planner trying to find profitable keywords. By the time you're done, you've burned through your daily productivity and still don't know what to create first.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <span class="icon">📊</span>
+                    <h3>SEO Data Paralysis</h3>
+                    <p>Competitor analysis spreadsheets with 500+ rows. Search volume data that contradicts itself. Keyword difficulty scores that don't match reality. You're drowning in data but starving for insights.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <span class="icon">💰</span>
+                    <h3>The $500/Month Tool Trap</h3>
+                    <p>Ahrefs ($399), SEMrush ($129), Surfer ($89), ContentKing ($80). Your tool stack costs more than your accommodation, but you still can't connect the dots between data and strategy.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <span class="icon">🎯</span>
+                    <h3>Content Priority Confusion</h3>
+                    <p>Should you target the high-volume keyword or the low-competition one? Focus on informational content or commercial? You're creating content without a clear ROI framework.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <span class="icon">⏱️</span>
+                    <h3>The Weekend Research Grind</h3>
+                    <p>Saturday morning in a Lisbon café: keyword research. Sunday afternoon: competitor analysis. Your location independence turned into location-dependent research marathons that steal your freedom.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <span class="icon">🔄</span>
+                    <h3>No Systematic Workflow</h3>
+                    <p>Every content project starts from scratch. No templates, no process, no prioritization framework. You're reinventing the wheel while your competitors are scaling systematically.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Content & Trends Struggles -->
+    <section class="trends-section">
+        <div class="container">
+            <h2 class="section-title">The Content Creation Nightmare Every Nomad Knows</h2>
+            <p class="section-subtitle">
+                Beyond the research chaos lies an even bigger challenge: creating content that actually converts while staying relevant across different markets and time zones.
+            </p>
+            
+            <div class="trends-grid">
+                <div class="trend-struggle">
+                    <div class="struggle-icon">📊</div>
+                    <h3>Vanity Metrics vs. Real Results</h3>
+                    <p>10,000 views, 500 likes, zero sales. You're creating content that gets engagement but doesn't move the business needle. Pretty analytics, empty bank account.</p>
+                </div>
+                
+                <div class="trend-struggle">
+                    <div class="struggle-icon">🎯</div>
+                    <h3>Generic Advice That Doesn't Convert</h3>
+                    <p>"Create valuable content" and "be consistent" - thanks, every marketing blog ever. But what specific content actually drives sales? What topics resonate with YOUR audience? Crickets.</p>
+                </div>
+            
+                <div class="trend-struggle">
+                    <div class="struggle-icon">🔍</div>
+                    <h3>What Actually Works? Nobody Knows</h3>
+                    <p>Your competitor's viral post about coffee got 50K views. You create something similar about coffee - 12 likes. The success recipes are either hidden or don't actually exist.</p>
+                </div>
+            </div>
+            
+            <div class="reality-check">
+                <div class="reality-content">
+                    <h3>The Reality: You're Creating Content in the Dark</h3>
+                    <p>Without real-time trend analysis, cultural insights, and performance data, you're basically throwing content at the wall and hoping something sticks. Meanwhile, your ideal customers are engaging with competitors who seem to magically know exactly what to say and when to say it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Solution Preview -->
+    <section class="solution-preview">
+        <div class="container">
+            <h2 class="section-title">The 60-Minute AI Workflow That Changes Everything</h2>
+            <p class="section-subtitle">
+                From business analysis to prioritized content plan - the complete system that turns overwhelming research into clear action items in under an hour.
+            </p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <span class="number">1</span>
+                    <h3>Business Analysis</h3>
+                    <p>AI-powered competitor analysis and market positioning in 15 minutes</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="number">2</span>
+                    <h3>Keyword Research</h3>
+                    <p>High-value keywords with search volume, competition, and commercial intent in 20 minutes</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="number">3</span>
+                    <h3>SEO Gap Analysis</h3>
+                    <p>Content opportunities your competitors are missing in 15 minutes</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <span class="number">4</span>
+                    <h3>Prioritized Content Plan</h3>
+                    <p>ROI-ranked content calendar with highest-value opportunities first in 10 minutes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <h2 class="section-title">Join the Nomads Who've Reclaimed Their Freedom</h2>
+            <p class="section-subtitle">
+                Real results from location-independent entrepreneurs who refuse to sacrifice their lifestyle for their business.
+            </p>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">20+</span>
+                    <p class="stat-label">Hours per week saved on keyword research and content planning</p>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-number">$6,000</span>
+                    <p class="stat-label">Annual savings from replacing expensive SEO tool subscriptions</p>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-number">90%</span>
+                    <p class="stat-label">Less time spent on research, 90% more time for execution</p>
+                </div>
+                
+                <div class="stat-item">
+                    <span class="stat-number">60</span>
+                    <p class="stat-label">Minutes to go from blank slate to complete content strategy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image" style="background: none; height: auto; display: block;">
+                    <img src="images/melissa-profile-how-to-fund-travel.png" alt="Digital nomad on a beach" style="width: 100%; height: auto; border-radius: 20px; display: block;">
+                </div>
+                <div class="about-text">
+                    <h3>Hi, I'm the nomad who solved this problem for myself first</h3>
+                    <p>
+                        After five years of globe-trotting with my family of six, I've lived the digital nomad dream—and its challenges. When our travel blog plans collapsed in 2020, I pivoted into fintech, mastering business growth and digital marketing along the way. Then everything changed: I discovered cutting-edge AI tools that transformed my approach to business completely.
+                    </p>
+                    <p>
+                        Now I can launch any business idea with powerful market research and content development literally at my fingertips. I simply ask, and AI delivers—in minutes, not weeks. This revelation isn't just for me—it's for you too.
+                    </p>
+                    <p>
+                        Whether you're looking to launch your dream business, scale your current venture, or pivot into a lucrative career as an AI marketing specialist, these skills are your ticket to location-independent success. I've tested these methods myself, and now I'm ready to share the exact blueprint that's working in today's AI-powered landscape.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Stop Sacrificing Sunsets for Screens</h2>
+            <p>
+                You became location-independent for freedom, but keyword research and content planning are stealing that freedom back, one late night in a Lisbon café at a time. Join the webinar and learn the 60-minute AI workflow that gives you your weekends back.
+            </p>
+            
+            <div class="final-signup-form">
+                <form id="finalSignup">
+                    <div class="form-group">
+                        <input type="text" name="firstName" placeholder="First Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    
+                    <button type="submit" class="cta-button">
+                        Yes, I Want My Time Freedom Back
+                    </button>
+                </form>
+                
+                <p class="guarantee" style="color: rgba(255,255,255,0.8); margin-top: 20px;">
+                    ✈️ Because your business should enable your adventures, not limit them.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // MailerLite API configuration
+        // SECURITY WARNING: API keys should NEVER be in frontend code!
+        // This should be handled server-side only
+        const MAILERLITE_API_KEY = 'REMOVED_FOR_SECURITY';
+        const GROUP_ID = '160813998579648469'; // Digital Nomads group ID
+
+        // Function to add subscriber to MailerLite
+        async function addSubscriberToMailerLite(subscriberData) {
+            try {
+                const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${MAILERLITE_API_KEY}`
+                    },
+                    body: JSON.stringify({
+                        email: subscriberData.email,
+                        name: subscriberData.name,
+                        groups: [GROUP_ID],
+                        fields: {
+                            business_type: subscriberData.businessType
+                        }
+                    })
+                });
+
+                if (response.ok) {
+                    return { success: true, message: 'Successfully subscribed!' };
+                } else {
+                    const errorData = await response.json();
+                    return { success: false, message: errorData.message || 'Subscription failed' };
+                }
+            } catch (error) {
+                console.error('Error adding subscriber:', error);
+                return { success: false, message: 'Network error. Please try again.' };
+            }
+        }
+
+        // Form submission handling for webinar signup
+        document.getElementById('webinarSignup').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const subscriberData = {
+                email: formData.get('email'),
+                name: formData.get('firstName'),
+                businessType: formData.get('business')
+            };
+
+            // Show loading state
+            const submitButton = this.querySelector('.cta-button');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Signing up...';
+            submitButton.disabled = true;
+
+            try {
+                const result = await addSubscriberToMailerLite(subscriberData);
+                
+                if (result.success) {
+                    window.location.href = 'thank-you.html';
+                } else {
+                    alert('Error: ' + result.message);
+                }
+            } catch (error) {
+                alert('An error occurred. Please try again.');
+            } finally {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            }
+        });
+
+        // Form submission handling for final signup
+        document.getElementById('finalSignup').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const subscriberData = {
+                email: formData.get('email'),
+                name: formData.get('firstName'),
+                businessType: 'webinar_signup'
+            };
+
+            // Show loading state
+            const submitButton = this.querySelector('.cta-button');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Signing up...';
+            submitButton.disabled = true;
+
+            try {
+                const result = await addSubscriberToMailerLite(subscriberData);
+                
+                if (result.success) {
+                    window.location.href = 'thank-you.html';
+                } else {
+                    alert('Error: ' + result.message);
+                }
+            } catch (error) {
+                alert('An error occurred. Please try again.');
+            } finally {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            }
+        });
+
+        // Smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

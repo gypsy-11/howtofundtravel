@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Girls in Business Community!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .welcome-section h2 {
+            color: #c44569;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .welcome-section p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .next-steps {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 4px solid #ff6b9d;
+        }
+        
+        .next-steps h3 {
+            color: #c44569;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .next-steps ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .next-steps li {
+            padding: 8px 0;
+            color: #666;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .next-steps li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .quick-win {
+            background: #fff3f7;
+            border: 2px solid #ff6b9d;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .quick-win h3 {
+            color: #c44569;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .quick-win ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        
+        .quick-win li {
+            padding: 5px 0;
+            color: #666;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .quick-win li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #ff6b9d;
+            font-weight: bold;
+        }
+        
+        .testimonial {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+            border-left: 4px solid #ff6b9d;
+        }
+        
+        .testimonial blockquote {
+            font-style: italic;
+            font-size: 16px;
+            color: #666;
+            margin: 0 0 15px 0;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #c44569;
+        }
+        
+        .social-links {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .social-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 5px;
+            font-weight: 500;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: #ff6b9d;
+            text-decoration: none;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 16px;
+            margin: 20px 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 600px) {
+            .content {
+                padding: 20px 15px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎉 Welcome to the Girls in Business Community!</h1>
+        </div>
+        
+        <!-- Content -->
+        <div class="content">
+            <!-- Welcome Section -->
+            <div class="welcome-section">
+                <h2>Hey {subscriber.name}!</h2>
+                <p>I'm so excited to have you join us! You've just taken the first step toward transforming how you approach marketing for your business.</p>
+                
+                <div class="highlight-box">
+                    <strong>You're now part of a community of ambitious women entrepreneurs who refuse to let marketing overwhelm steal their joy or their time.</strong>
+                </div>
+            </div>
+            
+            <!-- Next Steps -->
+            <div class="next-steps">
+                <h3>What Happens Next:</h3>
+                <ul>
+                    <li><strong>Check your email</strong> - You'll receive masterclass details within 24 hours</li>
+                    <li><strong>Get your prep materials</strong> - You'll receive our "Marketing Clarity Framework" workbook</li>
+                    <li><strong>Join the community</strong> - Connect with other women who are ready to level up their marketing</li>
+                    <li><strong>Save the date</strong> - We'll send you a calendar invite for the masterclass</li>
+                </ul>
+            </div>
+            
+            <!-- Quick Win -->
+            <div class="quick-win">
+                <h3>💡 Quick Win: The 80/20 Rule for Women Entrepreneurs</h3>
+                <p>Before the masterclass, try this simple strategy that takes 10 minutes:</p>
+                <p><strong>Instead of trying to be everywhere on social media, focus on the 2-3 platforms where your ideal clients actually spend time.</strong></p>
+                
+                <p>For most women entrepreneurs, this is usually:</p>
+                <ul>
+                    <li>Instagram (for visual businesses, coaching, lifestyle)</li>
+                    <li>LinkedIn (for B2B, consulting, professional services)</li>
+                    <li>Pinterest (for creative businesses, products, inspiration)</li>
+                </ul>
+                
+                <p><strong>Master one platform before expanding to others.</strong></p>
+            </div>
+            
+            <!-- What You'll Learn -->
+            <div class="next-steps">
+                <h3>🚀 What You'll Learn in the Masterclass</h3>
+                <p>In just 60 minutes, you'll discover:</p>
+                <ul>
+                    <li>How to create a complete marketing strategy in under an hour</li>
+                    <li>The AI tools that save you 10+ hours per week on content creation</li>
+                    <li>How to create content that actually converts (not just gets likes)</li>
+                    <li>The systematic approach that eliminates marketing overwhelm</li>
+                </ul>
+            </div>
+            
+            <!-- You're in Good Company -->
+            <div class="quick-win">
+                <h3>💪 You're in Good Company</h3>
+                <p>You're joining a community of women who've been exactly where you are:</p>
+                <ul>
+                    <li>Juggling business, family, and marketing with zero time for themselves</li>
+                    <li>Creating content that gets engagement but doesn't drive sales</li>
+                    <li>Feeling overwhelmed by all the marketing advice and tools</li>
+                    <li>Wondering if their competitors know something they don't</li>
+                </ul>
+                <p><strong>We're here to change that.</strong></p>
+            </div>
+            
+            <!-- Save the Date -->
+            <div class="highlight-box">
+                <h3>📅 Save the Date</h3>
+                <p>The masterclass will be [DATE] at [TIME] [TIMEZONE]. I'll send you the exact link and login details 24 hours before we start.</p>
+                <p><strong>Pro tip:</strong> Add our email to your contacts so you don't miss any important updates!</p>
+            </div>
+            
+            <!-- Pre-Masterclass Prep -->
+            <div class="next-steps">
+                <h3>🎯 Pre-Masterclass Prep</h3>
+                <p>To get the most value from the masterclass, I'll send you a quick questionnaire in the next email. This helps me customize the content specifically for your business type and goals.</p>
+                <p><strong>It takes less than 2 minutes to complete.</strong></p>
+            </div>
+            
+            <!-- Testimonial -->
+            <div class="testimonial">
+                <h3>🌟 Community Spotlight</h3>
+                <blockquote>
+                    "I was spending 3 hours every Sunday planning my content. After learning this AI system, I now have my entire month planned in 30 minutes. It's literally given me back my weekends!"
+                </blockquote>
+                <div class="testimonial-author">— Sarah M., Life Coach & Mother of Two</div>
+            </div>
+            
+            <!-- You're Part of Something Special -->
+            <div class="highlight-box">
+                <h3>💕 You're Part of Something Special</h3>
+                <p>You're now part of a community of ambitious women entrepreneurs who support each other, share wins, and build businesses that empower us to live life on our own terms.</p>
+                <p><strong>We're stronger together.</strong></p>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="social-links">
+                <h3>📱 Let's Stay Connected</h3>
+                <p>Follow along for daily tips, behind-the-scenes content, and to see how other women entrepreneurs are using AI to grow their businesses:</p>
+                
+                <a href="#" class="social-button">📱 Instagram</a>
+                <a href="#" class="social-button">💼 LinkedIn</a>
+                <a href="#" class="social-button">🎥 YouTube</a>
+            </div>
+            
+            <!-- CTA -->
+            <div style="text-align: center; margin: 40px 0;">
+                <h3>🎉 Ready to Transform Your Marketing?</h3>
+                <p>I can't wait to show you how to create marketing that works for YOUR business in the masterclass.</p>
+                <a href="#" class="cta-button">See You There!</a>
+            </div>
+            
+            <!-- Signature -->
+            <div style="text-align: center; margin: 30px 0; padding: 20px; border-top: 2px solid #f0f0f0;">
+                <p><strong>[Your Name]</strong></p>
+                <p style="font-size: 14px; color: #666; font-style: italic;">
+                    P.S. If you have any questions before the masterclass, just reply to this email. I'm here to support you every step of the way!
+                </p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2024 [Your Business Name]. All rights reserved.</p>
+            <p>You received this email because you signed up for our Girls in Business community.</p>
+            <p><a href="{unsubscribe}">Unsubscribe</a> | <a href="{webversion}">View in browser</a></p>
+        </div>
+    </div>
+</body>
+</html> 

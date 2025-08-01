@@ -1,5 +1,19 @@
 {
-  "dependencies": {
-    "dotenv": "^17.0.1"
-  }
-}
+  "name": "nomad-ai-marketing-landing",
+  "version": "1.0.0",
+  "description": "AI Marketing Landing Page for Digital Nomads",
+  "main": "nomad-ai-marketing-landing.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required for static HTML'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "ai",
+    "marketing",
+    "digital-nomad",
+    "landing-page"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+} 
