@@ -4,13 +4,13 @@ The dream of working remotely and travelling the world with your family is no lo
 
 In June 2021, that dream became a reality for us! Thanks to the flexibility and freedom of remote work, we've been able to explore new destinations, experience diverse cultures, and create lasting memories together.
 
-We've worked from Vietnam, Turkey, Greece, Spain, Bulgaria, back to Vietnam, Thailand, Malaysia and New Zealand. We've even done a full round the world from Auckland New Zealand to New York, USA, back to New Zealand, over to Malaysia, to Spain, the UK, a trans-atlantic cruise (thanks Starlink), Caribbean islands, a couple of months in Dominican Republic, Colombia, Panama, Japan... And of course, back to our favourite place, Vietnam.
+We've worked from Vietnam, Turkey, Greece, Spain, Bulgaria, back to Vietnam, Thailand, Malaysia and New Zealand. We've even done a full round the world from Auckland New Zealand to New York, USA, back to New Zealand, over to Malaysia, to Spain, the UK, a trans-atlantic cruise (thanks Starlink), Caribbean islands, a couple of months in Dominican Republic, Colombia, Panama, Japan... And of course, back to our favourite place,
 
 ## How We Make It Work
 
 Since 2021, the key to our nomadic lifestyle has been my remote job as a social media support specialist for a cryptocurrency wallet company.
 
-I took this role in mid-2021 because our funds were almost dried up, and I was really worried our sole income stream was too reliant on third parties. It turns out my instincts were on point as shortly after I started work, our crypto platform reduced payments, and soon after, completely stopped payments. It was my first lesson in Pay to Profit platforms - I'll get into those in another blog soon. Be wary of anyone selling things where you need to 'invest' and earn a return. Especially when it is focused on crypto. You could lose a lot more than money (friends, your reputation - you name it)
+I took this role in mid-2021 because our funds were almost dried up, and I was really worried our sole income stream was too reliant on third parties. It turns out my instincts were on point as shortly after I started work, our crypto platform reduced payments, and soon after, completely stopped payments. It was my first lesson in Pay to Profit platforms - I'll get into those in another blog soon. Be wary of anyone selling things where you need to 'invest' and earn a return. Especially when it is focused on crypto. You could lose a lot more than money (friends, your reputation - you name it).
 
 ## How Did I Get This Job?
 

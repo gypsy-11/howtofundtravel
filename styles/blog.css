@@ -3,6 +3,293 @@
    Extends main.css with blog-specific styling
 */
 
+/* Blog Post Layout - Main Content Spacing */
+.blog-post {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-post #main-content {
+    flex: 1;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+/* Blog Post Content Structure */
+.blog-post-content {
+    width: 100%;
+}
+
+.blog-post-header {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.blog-post-header .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.blog-post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.blog-post-category {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.blog-post-header h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+    font-weight: 700;
+}
+
+.blog-post-excerpt {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--medium);
+    max-width: 600px;
+}
+
+.blog-post-body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Blog Sections */
+.blog-section {
+    margin-bottom: 3rem;
+    padding: 0;
+}
+
+.blog-section:last-child {
+    margin-bottom: 0;
+}
+
+.blog-section h2 {
+    font-size: 2rem;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.blog-section h3 {
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.blog-section p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+/* Featured Image Section */
+.featured-image-section {
+    margin: 3rem 0;
+}
+
+.featured-image-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.featured-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 1rem;
+}
+
+.image-caption {
+    font-style: italic;
+    color: var(--medium);
+    font-size: 0.95rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Benefits Grid */
+.benefits-section {
+    background: var(--light);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    margin: 3rem 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.benefit-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--primary-color);
+}
+
+.benefit-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.benefit-item p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+/* Platforms List */
+.platforms-list {
+    background: var(--light);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    margin: 2rem 0;
+}
+
+.platforms-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.platforms-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.platforms-list li:last-child {
+    border-bottom: none;
+}
+
+.platforms-list strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Callout Box */
+.callout-box {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    margin: 2rem 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.callout-box p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--dark);
+}
+
+/* Resources Section */
+.resources-section {
+    background: var(--light);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    margin: 3rem 0;
+}
+
+.resources-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+.resources-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.resources-list li:last-child {
+    border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-post #main-content {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+    
+    .blog-post-header {
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+    }
+    
+    .blog-post-header h1 {
+        font-size: 2rem;
+    }
+    
+    .blog-post-body {
+        padding: 0 0.5rem;
+    }
+    
+    .blog-section {
+        margin-bottom: 2rem;
+    }
+    
+    .blog-section h2 {
+        font-size: 1.75rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .benefits-section,
+    .platforms-list,
+    .resources-section {
+        padding: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .featured-image-container {
+        margin: 1.5rem 0;
+    }
+    
+    .callout-box {
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+}
+
 /* Blog Hero Section */
 .blog-hero {
     position: relative;

@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/blog.css">
     
+    <!-- Template Include System -->
+    <script src="/js/template-includes.js" defer></script>
+    
     <!-- Link System Scripts - Include only what you need for this post -->
     <script src="/links/job-links.js" defer></script>
     <script src="/links/course-links.js" defer></script>
@@ -33,332 +36,103 @@
     <script src="/links/include-disclaimer.js" defer></script>
 </head>
 <body class="blog-post">
-    <header class="site-header">
-        <div class="container">
-            <nav class="main-nav" aria-label="Main Navigation">
-                <a href="/" class="logo" aria-label="How to Fund Travel Home">
-                    <img src="/images/how-to-fund-travel-logo-transparent.svg" alt="How to Fund Travel Logo" width="180" height="40">
-                </a>
-                
-                <button class="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
-                    <span class="sr-only">Menu</span>
-                    <span class="hamburger"></span>
-                </button>
-                
-                <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/blog/" class="active">Blog</a></li>
-                    <li><a href="/about.html">About Me</a></li>
-                    <li><a href="/resources">Resources</a></li>
-                    <li class="cta-button"><a href="/#newsletter" class="btn btn-primary">Join the Journey</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
+    <!-- Header and Footer will be automatically included by template-includes.js -->
+    
     <main id="main-content">
-        <!-- Blog Post Header -->
-        <section class="single-post-header" aria-labelledby="post-heading">
-            <div class="container">
-                <div class="post-category">Category Name</div>
-                <h1 id="post-heading" class="single-post-title">Your Blog Post Title: Engaging and SEO Optimized</h1>
-                
-                <div class="single-post-meta">
-                    <div class="single-post-meta-item">
-                        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
-                        </svg>
-                        <span>10 min read</span>
+        <article class="blog-post-content">
+            <!-- Blog Post Header Section -->
+            <header class="blog-post-header">
+                <div class="container">
+                    <div class="blog-post-meta">
+                        <span class="blog-post-category">Category</span>
+                        <time datetime="2024-01-01">January 1, 2024</time>
+                        <span class="read-time">5 min read</span>
                     </div>
-                    <div class="single-post-meta-item">
-                        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
-                        </svg>
-                        <span>June 15, 2023</span>
-                    </div>
-                    <div class="single-post-meta-item">
-                        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                        </svg>
-                        <span>By Melissa</span>
+                    <h1>Your Blog Post Title</h1>
+                    <div class="blog-post-excerpt">
+                        <p>Your blog post excerpt or description goes here. This should be a compelling summary that draws readers in.</p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </header>
 
-        <!-- Featured Image -->
-        <div class="single-post-featured-image">
-            <img src="/images/blog/your-featured-image.jpg" alt="Descriptive alt text for your featured image" width="900" height="500" loading="eager">
-        </div>
-
-        <!-- Post Content -->
-        <article class="post-content">
-            <div class="container">
-                <!-- Introduction -->
-                <p>Start with an engaging introduction that hooks the reader and clearly states what the post will cover. This paragraph should be compelling and speak directly to the reader's pain points or desires related to travel funding and location independence.</p>
-                
-                <p>Follow up with a paragraph that builds on the introduction and provides a brief overview of what readers will learn. Mention the specific value they'll get from reading this article.</p>
-                
-                <!-- Main Content Sections -->
-                <h2>First Main Section Heading</h2>
-                <p>Begin your first main point here. Use clear, concise language and focus on providing valuable information. Remember to use your authentic voice and share personal experiences where relevant.</p>
-                
-                <p>Continue developing this section with specific examples, tips, or strategies. This is where you can include your first set of affiliate links or resources if they naturally fit.</p>
-                
-                <!-- Example of including link collections -->
-                <div id="relevant-resources"></div>
-                
-                <h2>Second Main Section Heading</h2>
-                <p>Introduce your second main point or strategy. Again, focus on value and practical advice that readers can implement.</p>
-                
-                <h3>Important Sub-Section</h3>
-                <p>Break down complex ideas into smaller, more manageable sections. Use examples from your own travel experiences to illustrate your points.</p>
-                
-                <!-- Example of including an image within content -->
-                <figure>
-                    <img src="/images/blog/example-content-image.jpg" alt="Descriptive alt text for this image" width="700" height="400" loading="lazy">
-                    <figcaption>Caption explaining what this image shows and why it's relevant</figcaption>
-                </figure>
-                
-                <h2>Third Main Section Heading</h2>
-                <p>Continue with your third major point or strategy. Maintain the focus on practical advice and real-world application.</p>
-                
-                <p>This is a good place for a personal story or case study that reinforces your message. People connect with stories and examples of how others have successfully implemented your advice.</p>
-                
-                <!-- Example of a quotation or highlight box -->
-                <blockquote>
-                    <p>Include an inspirational quote or key takeaway that reinforces your message about funding travel or achieving location independence.</p>
-                </blockquote>
-                
-                <!-- Relevant Link Section -->
-                <h3>Recommended Resources</h3>
-                <p>Here are some tools and resources that have helped us fund our travel lifestyle:</p>
-                
-                <!-- Example job links container -->
-                <div id="job-links-container"></div>
-                
-                <!-- Example course links container -->
-                <div id="course-links-container"></div>
-                
-                <h2>Conclusion</h2>
-                <p>Summarize the main points from your article and remind readers of the value they've received. Reinforce why these strategies are important for achieving their travel funding goals.</p>
-                
-                <p>End with a call to action - what should the reader do next? This could be trying one of your strategies, subscribing to your newsletter, or checking out a related resource.</p>
-                
-                <!-- Post Tags -->
-                <div class="post-tags">
-                                            <a href="/blog/category/tag-name">Tag Name</a>
-                        <a href="/blog/category/another-tag">Another Tag</a>
-                        <a href="/blog/category/third-tag">Third Tag</a>
-                </div>
-                
-                <!-- Author Box -->
-                <div class="author-box">
-                    <div class="author-image">
-                        <img src="/images/melissa-profile-how-to-fund-travel.png" alt="Melissa, founder of How to Fund Travel" width="100" height="100">
-                    </div>
-                    <div class="author-content">
-                        <h3>About Melissa</h3>
-                        <p class="author-bio">Melissa is the founder of How to Fund Travel, helping families achieve location independence and break free from traditional norms. With over 4 years of continuous travel experience with her family, she shares practical strategies for funding a travel lifestyle.</p>
-                        <div class="author-social">
-                            <a href="https://instagram.com/fulltimefamilytravel" aria-label="Follow Melissa on Instagram">Instagram</a>
-                            <a href="https://facebook.com/worldtravelambitions" aria-label="Follow Melissa on Facebook">Facebook</a>
-                            <a href="https://www.linkedin.com/in/melissawiringi/" aria-label="Connect with Melissa on LinkedIn">LinkedIn</a>
+            <!-- Blog Post Body -->
+            <div class="blog-post-body">
+                <div class="container">
+                    <!-- Featured Image Section (optional) -->
+                    <div class="featured-image-section">
+                        <div class="featured-image-container">
+                            <img src="/images/blog/your-featured-image.jpg" alt="Featured image description" class="featured-image">
+                            <p class="image-caption">Optional image caption</p>
                         </div>
                     </div>
+
+                    <!-- Main Content Sections -->
+                    <section class="blog-section">
+                        <h2>First Section Heading</h2>
+                        <p>Your content goes here. This is where you'll write the main body of your blog post.</p>
+                        
+                        <h3>Subsection Heading</h3>
+                        <p>More content for your subsection.</p>
+                    </section>
+
+                    <!-- Benefits Section Example -->
+                    <section class="benefits-section">
+                        <h2>Key Benefits</h2>
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <h3>Benefit 1</h3>
+                                <p>Description of the first benefit.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <h3>Benefit 2</h3>
+                                <p>Description of the second benefit.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <h3>Benefit 3</h3>
+                                <p>Description of the third benefit.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Callout Box Example -->
+                    <div class="callout-box">
+                        <p><strong>Important Note:</strong> This is a highlighted callout box for important information or tips.</p>
+                    </div>
+
+                    <!-- Resources Section Example -->
+                    <section class="resources-section">
+                        <h2>Resources & Tools</h2>
+                        <div class="resources-list">
+                            <ul>
+                                <li><strong>Resource 1:</strong> Description of the first resource.</li>
+                                <li><strong>Resource 2:</strong> Description of the second resource.</li>
+                                <li><strong>Resource 3:</strong> Description of the third resource.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Platforms List Example -->
+                    <div class="platforms-list">
+                        <h3>Recommended Platforms</h3>
+                        <ul>
+                            <li><strong>Platform 1:</strong> Description and benefits.</li>
+                            <li><strong>Platform 2:</strong> Description and benefits.</li>
+                            <li><strong>Platform 3:</strong> Description and benefits.</li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <!-- Disclaimer -->
-                <div id="disclaimer"></div>
             </div>
         </article>
-        
-        <!-- Related Posts -->
-        <section class="related-posts" aria-labelledby="related-heading">
-            <div class="container">
-                <h2 id="related-heading">You Might Also Like</h2>
-                
-                <div class="posts-grid">
-                    <!-- Related Post 1 -->
-                    <article class="post-card">
-                        <a href="/blog/remote-work-strategies" class="post-image">
-                            <img src="/images/blog/remote-work-strategies.jpg" alt="Person working remotely by the beach" width="380" height="220" loading="lazy">
-                        </a>
-                        <div class="post-category">Remote Work</div>
-                                                    <h3 class="post-title"><a href="/blog/remote-work-strategies">10 Remote Work Strategies for Parents Who Travel</a></h3>
-                        <p class="post-excerpt">Discover how to balance work responsibilities with family adventures while traveling the world.</p>
-                        <div class="post-meta">
-                            <span class="post-date">June 15, 2023</span>
-                            <span class="read-time">8 min read</span>
-                        </div>
-                    </article>
-
-                    <!-- Related Post 2 -->
-                    <article class="post-card">
-                        <a href="/blog/online-business-models" class="post-image">
-                            <img src="/images/blog/online-business-models.jpg" alt="Laptop showing analytics dashboard" width="380" height="220" loading="lazy">
-                        </a>
-                        <div class="post-category">Online Business</div>
-                                                    <h3 class="post-title"><a href="/blog/online-business-models">5 Online Business Models That Fund Full-Time Travel</a></h3>
-                        <p class="post-excerpt">Explore proven business models that provide consistent income while maintaining location freedom.</p>
-                        <div class="post-meta">
-                            <span class="post-date">May 28, 2023</span>
-                            <span class="read-time">10 min read</span>
-                        </div>
-                    </article>
-
-                    <!-- Related Post 3 -->
-                    <article class="post-card">
-                        <a href="/blog/mindset-transformation" class="post-image">
-                            <img src="/images/blog/mindset-transformation.jpg" alt="Person looking at sunset over mountains" width="380" height="220" loading="lazy">
-                        </a>
-                        <div class="post-category">Freedom Mindset</div>
-                                                    <h3 class="post-title"><a href="/blog/mindset-transformation">Breaking Free: The Mindset Shift That Changed Everything</a></h3>
-                        <p class="post-excerpt">Learn how to overcome the mental barriers that keep you stuck in the conventional life path.</p>
-                        <div class="post-meta">
-                            <span class="post-date">April 10, 2023</span>
-                            <span class="read-time">7 min read</span>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Newsletter Section -->
-        <section id="newsletter" class="newsletter-section" aria-labelledby="newsletter-heading">
-            <div class="container">
-                <div class="newsletter-content">
-                    <h2 id="newsletter-heading">Get Your Free Family Visa Research Guide</h2>
-                    <p class="newsletter-tagline">The stress-free visa research cheat sheet for slow travel families. Never miss an important visa requirement again!</p>
-                    
-                    <form action="https://app.mailerlite.com/webforms/submit/XXXXX" method="post" class="newsletter-form" data-netlify="true">
-                        <div class="form-group">
-                            <label for="email" class="sr-only">Your Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="Your email address" required class="form-input">
-                            <button type="submit" class="btn btn-primary">Get Free Access</button>
-                        </div>
-                        <div class="form-privacy">
-                            <small>We respect your privacy. Unsubscribe anytime. <a href="/privacy">Privacy Policy</a></small>
-                        </div>
-                    </form>
-                </div>
-                <div class="newsletter-image">
-                    <img src="/images/visa-guide-mockup.jpg" alt="Family Visa Research Guide Preview" width="400" height="300" loading="lazy">
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="/" class="footer-logo">
-                        <img src="/images/how-to-fund-travel-logo-white.svg" alt="How to Fund Travel Logo" width="160" height="35">
-                    </a>
-                    <p class="footer-tagline">Helping families achieve location independence and fund their travel lifestyle.</p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-nav">
-                        <h3>Navigation</h3>
-                        <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/blog/">Blog</a></li>
-                            <li><a href="/about.html">About Me</a></li>
-                            <li><a href="/resources">Resources</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-categories">
-                        <h3>Explore</h3>
-                        <ul>
-                            <li><a href="/blog/category/remote-work">Remote Work</a></li>
-                            <li><a href="/blog/category/online-business">Online Business</a></li>
-                            <li><a href="/blog/category/investing">Travel Investing</a></li>
-                            <li><a href="/blog/category/mindset">Freedom Mindset</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-legal">
-                        <h3>Legal</h3>
-                        <ul>
-                            <li><a href="/privacy">Privacy Policy</a></li>
-                            <li><a href="/terms">Terms of Use</a></li>
-                            <li><a href="/disclaimer">Disclaimer</a></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="footer-newsletter">
-                    <h3>Stay Connected</h3>
-                    <p>Join our community of freedom seekers and receive travel funding tips.</p>
-                    <a href="#newsletter" class="btn btn-secondary">Subscribe</a>
-                    
-                    <div class="social-icons">
-                        <a href="https://instagram.com/fulltimefamilytravel" aria-label="Follow us on Instagram">
-                            <svg aria-hidden="true" width="24" height="24"><use href="#icon-instagram"></use></svg>
-                        </a>
-                        <a href="https://facebook.com/worldtravelambitions" aria-label="Follow us on Facebook">
-                            <svg aria-hidden="true" width="24" height="24"><use href="#icon-facebook"></use></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/melissawiringi/" aria-label="Connect with us on LinkedIn">
-                            <svg aria-hidden="true" width="24" height="24"><use href="#icon-linkedin"></use></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; <script>document.write(new Date().getFullYear())</script> How to Fund Travel. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- SVG Icons Sprite - Hidden -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="icon-instagram" viewBox="0 0 24 24">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-        </symbol>
-        <symbol id="icon-facebook" viewBox="0 0 24 24">
-            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385h-3.047v-3.47h3.047v-2.642c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.514c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385c5.737-.9 10.125-5.864 10.125-11.854z"/>
-        </symbol>
-        <symbol id="icon-youtube" viewBox="0 0 24 24">
-            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-        </symbol>
-        <symbol id="icon-pinterest" viewBox="0 0 24 24">
-            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/>
-        </symbol>
-        <symbol id="icon-linkedin" viewBox="0 0 24 24">
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-        </symbol>
-    </svg>
-    
     <!-- Scripts -->
     <script src="/js/main.js" defer></script>
     
     <!-- Link System Initialization -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize link systems - customize as needed for each post
-            if (typeof loadJobLinks === 'function') {
-                loadJobLinks('job-links-container');
-            }
-            
-            if (typeof loadCourseLinks === 'function') {
-                loadCourseLinks('course-links-container');
-            }
-            
-            // Load relevant resources based on post category
-            if (typeof loadAffiliateLinks === 'function') {
-                loadAffiliateLinks('relevant-resources', { category: 'your-category' });
-            }
-            
-            // Add disclaimer
-            if (typeof includeDisclaimer === 'function') {
-                includeDisclaimer('disclaimer');
-            }
+            // Initialize any blog-specific functionality here
+            console.log('Blog post loaded successfully');
         });
     </script>
 </body>

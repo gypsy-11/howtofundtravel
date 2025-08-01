@@ -1,0 +1,42 @@
+<!-- 
+    HEADER TEMPLATE - How to Fund Travel
+    
+    This is the standardized header/navigation for the How to Fund Travel website.
+    Include this template using JavaScript for consistency across all pages.
+    
+    Instructions:
+    1. The script will automatically adjust relative paths based on the page location
+    2. The "active" class will be set based on the current page
+    3. Search functionality is included by default
+-->
+
+<header class="site-header">
+    <div class="container">
+        <nav class="main-nav" aria-label="Main Navigation">
+            <a href="/" class="logo" aria-label="How to Fund Travel Home">
+                <img src="/images/how-to-fund-travel-logo-transparent.svg" alt="How to Fund Travel Logo" width="150" height="32">
+            </a>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-links">
+                <li><a href="/" data-nav="home">Home</a></li>
+                <li><a href="/blog/" data-nav="blog">Blog</a></li>
+                <li><a href="/about.html" data-nav="about">About Me</a></li>
+            </ul>
+            
+            <div class="header-actions">
+                <div class="search-container">
+                    <input type="text" placeholder="Search travel funding tips..." class="search-input">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M15.5 14h-.79l-.28-.27c.98-1.14 1.57-2.62 1.57-4.23 0-3.59-2.91-6.5-6.5-6.5S2.5 5.91 2.5 9.5s2.91 6.5 6.5 6.5c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    </svg>
+                </div>
+                <a href="/#newsletter" class="btn btn-primary subscribe-btn">Subscribe</a>
+            </div>
+        </nav>
+    </div>
+</header> 

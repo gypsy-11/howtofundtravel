@@ -23,3 +23,6 @@ yarn-error.log*
 /drafts
 /examples
 /research1
+
+# Configuration guides
+/configuration-guides/
