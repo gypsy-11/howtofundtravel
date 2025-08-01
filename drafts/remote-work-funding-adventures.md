@@ -4,7 +4,7 @@ The dream of working remotely and travelling the world with your family is no lo
 
 In June 2021, that dream became a reality for us! Thanks to the flexibility and freedom of remote work, we've been able to explore new destinations, experience diverse cultures, and create lasting memories together.
 
-We've worked from Vietnam, Turkey, Greece, Spain, Bulgaria, back to Vietnam, Thailand, Malaysia and now New Zealand.
+We've worked from Vietnam, Turkey, Greece, Spain, Bulgaria, back to Vietnam, Thailand, Malaysia and New Zealand. We've even done a full round the world from Auckland New Zealand to New York, USA, back to New Zealand, over to Malaysia, to Spain, the UK, a trans-atlantic cruise (thanks Starlink), Caribbean islands, a couple of months in Dominican Republic, Colombia, Panama, Japan... And of course, back to our favourite place, Vietnam.
 
 ## How We Make It Work
 
