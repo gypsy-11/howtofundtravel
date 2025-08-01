@@ -20,6 +20,14 @@
     {
       "src": "blog/**",
       "use": "@vercel/static"
+    },
+    {
+      "src": "links/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "templates/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
