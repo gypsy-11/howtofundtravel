@@ -6,7 +6,7 @@ This file contains curated Unsplash image links organized by category for easy r
 
 ### Success & Achievement
 - **"I Am Enough" Mindset** - Crossword spelling "I am enough" on white background
-  - URL: https://plus.unsplash.com/premium_photo-1671599010192-23b6bfd6fb6e
+  - URL: https://plus.unsplash.com/premium_photo-1671599010192-23b6bfd6fb6e?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
   - ID: `Jtk5X-W3cbo`
   - Perfect for: Mindset shifts, self-belief, personal development
 
@@ -15,8 +15,8 @@ This file contains curated Unsplash image links organized by category for easy r
   - ID: `FiZTaNTj2Ak`
   - Perfect for: Breakthrough moments, reaching goals, mindset transformation
 
-- **Mountain Achievement** - Woman jumping on rocky mountain
-  - URL: https://images.unsplash.com/photo-1610382707646-5ab3e74e84ba
+- **Mountain Achievement** - Woman standing on rocky mountain
+  - URL: https://plus.unsplash.com/premium_photo-1669638780821-4c4c1329f842?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
   - ID: `b8B3qDqy8vs`
   - Perfect for: Overcoming challenges, achieving goals, celebration
 
@@ -61,8 +61,8 @@ This file contains curated Unsplash image links organized by category for easy r
 ## 💰 Finance & Business
 
 ### Business & Entrepreneurship
-- **Drone Control** - Man holding tablet outdoors
-  - URL: https://images.unsplash.com/photo-1488383333402-31bf170c014f
+- **Business** - Woman at coffee table working with coffee
+  - URL: https://images.unsplash.com/photo-1574675206065-dc5d1230638e?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
   - ID: `lF7PE1QMbjY`
   - Perfect for: Technology business, innovation, outdoor work
 

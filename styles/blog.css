@@ -24,7 +24,7 @@
 /* Blog Hero Section - Improved spacing and structure */
 .blog-hero {
     position: relative;
-    padding: 6rem 0 4rem; /* Increased top padding to create space from header */
+    padding: 6rem 0 0; /* Removed bottom padding completely to eliminate gap */
     background: url('../images/ocean-shores-transparency.png') no-repeat center center;
     background-size: cover;
     min-height: 60vh;
@@ -489,9 +489,11 @@
 
 /* Blog Categories */
 .blog-categories {
-  padding: 2rem 0;
+  padding: 2rem 0 2rem; /* Increased top padding for better button positioning */
   border-bottom: 1px solid rgba(0,0,0,0.1);
   background-color: #f8faf9;
+  margin-top: 0; /* Removed negative margin since hero has no bottom padding */
+  position: relative;
 }
 
 .category-filters {
@@ -500,6 +502,8 @@
   gap: 0.75rem;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .category-btn {
@@ -1244,4 +1248,182 @@
     flex-direction: column;
     gap: var(--space-xs);
   }
+}
+
+/* Category Filtering Animations and UX Enhancements */
+.post-card,
+.featured-post-card {
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover,
+.featured-post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Smooth transitions for category filtering */
+.post-card[style*="display: none"],
+.featured-post-card[style*="display: none"] {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+.post-card[style*="display: block"],
+.featured-post-card[style*="display: block"] {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Category button active state improvements */
+.category-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.category-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.category-btn:hover::before {
+  left: 100%;
+}
+
+.category-btn.active::before {
+  display: none;
+}
+
+/* Posts counter styling */
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.posts-counter {
+  font-size: 0.9rem;
+  color: var(--medium);
+  font-weight: 500;
+}
+
+/* No results state */
+.no-results {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--medium);
+}
+
+.no-results p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Enhanced no-results styling */
+.no-results h3 {
+  color: var(--dark);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.no-results .btn {
+  margin: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.no-results .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Category filter feedback - positioned at the base of the section */
+.category-filters::after {
+  content: '';
+  position: absolute;
+  bottom: -2rem; /* Position at the base of the section */
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.category-filters.has-active::after {
+  transform: scaleX(1);
+}
+
+/* Loading state for category filtering */
+.category-btn.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.category-btn.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Improved posts grid for better filtering experience */
+.posts-grid {
+  min-height: 400px;
+  transition: all 0.3s ease;
+}
+
+.posts-grid:empty::before {
+  content: 'Loading...';
+  display: block;
+  text-align: center;
+  padding: 2rem;
+  color: var(--medium);
+  font-style: italic;
+}
+
+/* Category badge improvements */
+.post-category-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(42, 157, 143, 0.9);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.post-category-badge:hover {
+  background: rgba(42, 157, 143, 1);
+  transform: scale(1.05);
 } 

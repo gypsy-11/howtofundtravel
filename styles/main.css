@@ -456,7 +456,7 @@ body.nav-open .site-header {
     display: flex;
     align-items: center;
     color: var(--dark);
-    margin-bottom: 3rem;
+    margin-bottom: 0; /* Removed margin to eliminate gap */
 }
 
 /* Remove the dark overlay */

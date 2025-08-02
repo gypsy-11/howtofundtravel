@@ -30,6 +30,7 @@ class TemplateManager {
         try {
             // Check if header already exists
             if (document.querySelector('.site-header')) {
+                console.log('Header already exists, skipping includeHeader');
                 return;
             }
             
@@ -51,10 +52,8 @@ class TemplateManager {
             // Set active navigation state
             this.setActiveNavigation();
             
-            // Initialize mobile navigation
-            if (typeof initMobileNav === 'function') {
-                initMobileNav();
-            }
+            // Note: Mobile navigation will be initialized by main.js
+            // No need to call initMobileNav() here to avoid conflicts
         } catch (error) {
             console.error('Error loading header template:', error);
             // Fallback: create a simple header
@@ -66,6 +65,7 @@ class TemplateManager {
         try {
             // Check if footer already exists
             if (document.querySelector('.site-footer')) {
+                console.log('Footer already exists, skipping includeFooter');
                 return;
             }
             
@@ -259,8 +259,10 @@ class TemplateManager {
 
     // Initialize all templates
     async init() {
+        console.log('TemplateManager: Starting initialization');
         await this.includeHeader();
         await this.includeFooter();
+        console.log('TemplateManager: Initialization complete');
     }
 }
 
@@ -268,6 +270,12 @@ class TemplateManager {
 document.addEventListener('DOMContentLoaded', function() {
     // Prevent multiple initializations
     if (window.templateManagerInitialized) {
+        return;
+    }
+    
+    // Additional check to prevent race conditions
+    if (document.querySelector('.site-header')) {
+        console.log('Header already exists, skipping template initialization');
         return;
     }
     
