@@ -4,16 +4,12 @@
 class TemplateManager {
     constructor() {
         this.basePath = this.getBasePath();
-        console.log('TemplateManager initialized with basePath:', this.basePath);
     }
 
     getBasePath() {
         // Determine the base path based on current page location
         const path = window.location.pathname;
         const hostname = window.location.hostname;
-        
-        console.log('Current path:', path);
-        console.log('Current hostname:', hostname);
         
         // For local development (localhost or file://)
         if (hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '') {
@@ -32,16 +28,22 @@ class TemplateManager {
 
     async includeHeader() {
         try {
+            // Check if header already exists
+            if (document.querySelector('.site-header')) {
+                return;
+            }
+            
             const headerPath = `${this.basePath}templates/header-template.html`;
-            console.log('Loading header from:', headerPath);
             
             const response = await fetch(headerPath);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             
-            const headerHtml = await response.text();
-            console.log('Header loaded successfully');
+            let headerHtml = await response.text();
+            
+            // Adjust paths in header template
+            headerHtml = this.adjustPaths(headerHtml);
             
             // Insert header at the beginning of body
             document.body.insertAdjacentHTML('afterbegin', headerHtml);
@@ -62,38 +64,39 @@ class TemplateManager {
 
     async includeFooter() {
         try {
+            // Check if footer already exists
+            if (document.querySelector('.site-footer')) {
+                return;
+            }
+            
             const footerPath = `${this.basePath}templates/footer-template.html`;
-            console.log('Loading footer from:', footerPath);
-            console.log('Base path:', this.basePath);
             
             const response = await fetch(footerPath);
-            console.log('Footer response status:', response.status);
-            console.log('Footer response ok:', response.ok);
             
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             
             let footerHtml = await response.text();
-            console.log('Footer loaded successfully, length:', footerHtml.length);
-            console.log('Footer content preview:', footerHtml.substring(0, 200) + '...');
             
             // Adjust paths in footer template
             footerHtml = this.adjustPaths(footerHtml);
-            console.log('Footer paths adjusted');
             
             // Insert footer before closing body tag
             document.body.insertAdjacentHTML('beforeend', footerHtml);
-            console.log('Footer inserted into DOM');
         } catch (error) {
             console.error('Error loading footer template:', error);
-            console.log('Falling back to basic footer...');
             // Fallback: create a simple footer
             this.createFallbackFooter();
         }
     }
 
     createFallbackHeader() {
+        // Check if header already exists
+        if (document.querySelector('.site-header')) {
+            return;
+        }
+        
         const fallbackHeader = `
             <header class="site-header">
                 <div class="container">
@@ -130,6 +133,11 @@ class TemplateManager {
     }
 
     createFallbackFooter() {
+        // Check if footer already exists
+        if (document.querySelector('.site-footer')) {
+            return;
+        }
+        
         const fallbackFooter = `
             <footer class="site-footer">
                 <div class="container">
@@ -221,9 +229,13 @@ class TemplateManager {
     }
 
     adjustPaths(html) {
-        // Replace relative paths with correct base path
-        return html.replace(/href="\.\.\//g, `href="${this.basePath}`)
-                   .replace(/src="\.\.\//g, `src="${this.basePath}`);
+        // Replace both absolute paths (starting with /) and relative paths (starting with ../) with correct base path
+        let adjustedHtml = html.replace(/href="\//g, `href="${this.basePath}`)
+                               .replace(/src="\//g, `src="${this.basePath}`)
+                               .replace(/href="\.\.\//g, `href="${this.basePath}`)
+                               .replace(/src="\.\.\//g, `src="${this.basePath}`);
+        
+        return adjustedHtml;
     }
 
     setActiveNavigation() {
@@ -247,16 +259,21 @@ class TemplateManager {
 
     // Initialize all templates
     async init() {
-        console.log('Initializing templates...');
         await this.includeHeader();
         await this.includeFooter();
-        console.log('Templates initialization complete');
     }
 }
 
 // Auto-initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, initializing TemplateManager...');
+    // Prevent multiple initializations
+    if (window.templateManagerInitialized) {
+        return;
+    }
+    
     const templateManager = new TemplateManager();
     templateManager.init();
+    
+    // Mark as initialized
+    window.templateManagerInitialized = true;
 }); 

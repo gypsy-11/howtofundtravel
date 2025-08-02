@@ -12,7 +12,7 @@
 
 .blog-post #main-content {
     flex: 1;
-    padding-top: 2rem;
+    padding-top: 0; /* Remove top padding since we'll handle spacing in blog-hero */
     padding-bottom: 4rem;
 }
 
@@ -21,11 +21,71 @@
     width: 100%;
 }
 
+/* Blog Hero Section - Improved spacing and structure */
+.blog-hero {
+    position: relative;
+    padding: 6rem 0 4rem; /* Increased top padding to create space from header */
+    background: url('../images/ocean-shores-transparency.png') no-repeat center center;
+    background-size: cover;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    color: var(--dark);
+    margin-top: 0; /* Ensure no margin to prevent gaps */
+}
+
+/* Remove the dark overlay */
+/* .blog-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+} */
+
+.blog-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2.5rem; /* Increased padding for better spacing */
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.blog-hero-text {
+    text-align: center;
+}
+
+.blog-hero-text h1 {
+    color: var(--dark);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.blog-hero-subtitle {
+    color: var(--medium);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Blog Post Header Section - Alternative structure for posts without hero */
 .blog-post-header {
     background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
-    padding: 3rem 0;
+    padding: 4rem 0 3rem; /* Increased top padding */
     margin-bottom: 3rem;
     border-bottom: 1px solid var(--border-color);
+    margin-top: 0; /* Ensure no gap from header */
 }
 
 .blog-post-header .container {
@@ -200,19 +260,62 @@
 
 /* Callout Box */
 .callout-box {
-    background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
-    border-left: 4px solid var(--primary-color);
-    padding: 1.5rem;
+    background: rgba(59, 130, 246, 0.05);
+    border-left: 3px solid var(--primary-color);
+    padding: 1.25rem 1.5rem;
     border-radius: var(--radius-md);
     margin: 2rem 0;
-    box-shadow: var(--shadow-sm);
+    position: relative;
+}
+
+.callout-box::before {
+    content: "💡";
+    position: absolute;
+    top: -8px;
+    left: 1rem;
+    background: white;
+    padding: 0 0.5rem;
+    font-size: 0.875rem;
 }
 
 .callout-box p {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6;
     color: var(--dark);
+    font-style: italic;
+}
+
+/* Points Container - Similar to FAQ format */
+.points-container {
+    max-width: 100%;
+    margin: 2rem 0;
+}
+
+.point-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--primary-color);
+}
+
+.point-item:last-child {
+    margin-bottom: 0;
+}
+
+.point-item h3 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.point-item p {
+    color: var(--medium);
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* Resources Section */
@@ -243,12 +346,30 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .blog-post #main-content {
-        padding-top: 1rem;
+        padding-top: 0;
         padding-bottom: 2rem;
     }
     
+    .blog-hero {
+        padding: 4rem 0 2rem; /* Reduced padding for mobile */
+        min-height: 50vh;
+    }
+    
+    .blog-hero-content {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .blog-hero-text h1 {
+        font-size: clamp(2rem, 7vw, 2.8rem);
+    }
+    
+    .blog-hero-subtitle {
+        font-size: 1rem;
+    }
+    
     .blog-post-header {
-        padding: 2rem 0;
+        padding: 3rem 0 2rem;
         margin-bottom: 2rem;
     }
     
@@ -285,80 +406,23 @@
     }
     
     .callout-box {
-        padding: 1rem;
+        padding: 1rem 1.25rem;
         margin: 1.5rem 0;
     }
-}
-
-/* Blog Hero Section */
-.blog-hero {
-    position: relative;
-    padding: 4rem 0;
-    background: url('../images/ocean-shores-transparency.png') no-repeat center center;
-    background-size: cover;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    color: var(--dark);
-}
-
-/* Remove the dark overlay */
-/* .blog-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
-    z-index: 1;
-} */
-
-.blog-hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 2rem;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-}
-
-.blog-hero-text {
-    text-align: center;
-}
-
-.blog-hero-text h1 {
-    color: var(--dark);
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-}
-
-.blog-hero-subtitle {
-    color: var(--medium);
-    font-size: 1.125rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media (max-width: 768px) {
-  .blog-hero-new {
-    padding: 2rem 0 1.5rem;
-  }
-  
-  .blog-hero-title {
-    font-size: clamp(2rem, 7vw, 2.8rem);
-  }
-  
-  .blog-hero-description {
-    font-size: 1rem;
-  }
+    
+    .callout-box::before {
+        font-size: 0.75rem;
+        top: -6px;
+    }
+    
+    .point-item {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .point-item h3 {
+        font-size: 1.125rem;
+    }
 }
 
 /* Blog Header */

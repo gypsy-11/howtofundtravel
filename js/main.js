@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile Navigation Toggle
   initMobileNav();
   
+  // Header scroll behavior (hide/show on scroll)
+  initHeaderScroll();
+  
   // Smooth scrolling for anchor links
   initSmoothScroll();
   
@@ -39,6 +42,13 @@ function initMobileNav() {
     // Prevent body scroll when menu is open
     document.body.classList.toggle('nav-open');
     
+    // Ensure header is visible when mobile menu is open
+    const header = document.querySelector('.site-header');
+    if (header && !isExpanded) {
+      header.classList.remove('header-hidden');
+      header.classList.add('header-visible');
+    }
+    
     // Transform hamburger into X
     if (isExpanded) {
       menuToggle.classList.remove('open');
@@ -60,6 +70,178 @@ function initMobileNav() {
       menuToggle.classList.remove('open');
     }
   });
+}
+
+/**
+ * Header scroll behavior - hide on scroll down, show on scroll up
+ */
+function initHeaderScroll() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+  
+  let lastScrollTop = 0;
+  let scrollThreshold = 100; // Minimum scroll distance before hiding
+  let isScrolling = false;
+  let scrollTimeout;
+  let ticking = false;
+  
+  // Check if user prefers reduced motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) return;
+  
+  // Don't hide header on mobile devices (smaller screens)
+  const isMobile = window.innerWidth <= 768;
+  if (isMobile) return;
+  
+  // Detect Brave browser
+  const isBrave = navigator.brave?.isBrave() || 
+                  navigator.userAgent.includes('Brave') ||
+                  window.chrome?.webstore === undefined;
+  
+  // Get scroll position - handle different browsers
+  function getScrollTop() {
+    // Try multiple methods to get scroll position for better browser compatibility
+    const scrollTop = window.pageYOffset || 
+                     document.documentElement.scrollTop || 
+                     document.body.scrollTop || 
+                     0;
+    
+    // Debug logging (remove in production)
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      console.log('Scroll position:', scrollTop, 'Method:', 
+        window.pageYOffset ? 'pageYOffset' : 
+        document.documentElement.scrollTop ? 'documentElement.scrollTop' : 
+        document.body.scrollTop ? 'body.scrollTop' : 'fallback');
+    }
+    
+    return scrollTop;
+  }
+  
+  // Update header visibility
+  function updateHeaderVisibility() {
+    const currentScrollTop = getScrollTop();
+    const scrollDelta = currentScrollTop - lastScrollTop;
+    
+    // Check if mobile menu is open - if so, don't hide header
+    const mobileMenuOpen = document.querySelector('.nav-links.active');
+    if (mobileMenuOpen) {
+      header.classList.remove('header-hidden');
+      header.classList.add('header-visible');
+      lastScrollTop = currentScrollTop;
+      ticking = false;
+      return;
+    }
+    
+      // Only hide/show if we've scrolled enough (more sensitive for Brave)
+  const scrollSensitivity = isBrave ? 1 : 3;
+  if (Math.abs(scrollDelta) > scrollSensitivity) {
+    if (currentScrollTop > scrollThreshold) {
+      if (scrollDelta > 0) {
+        // Scrolling down - hide header
+        header.classList.remove('header-visible');
+        header.classList.add('header-hidden');
+      } else {
+        // Scrolling up - show header
+        header.classList.remove('header-hidden');
+        header.classList.add('header-visible');
+      }
+    } else {
+      // Near top of page - always show header
+      header.classList.remove('header-hidden');
+      header.classList.add('header-visible');
+    }
+  }
+    
+    lastScrollTop = currentScrollTop;
+    ticking = false;
+  }
+  
+  // Throttled scroll handler
+  function handleScroll() {
+    if (!ticking) {
+      requestAnimationFrame(updateHeaderVisibility);
+      ticking = true;
+    }
+  }
+  
+  // Add scroll event listener with multiple fallbacks for Brave browser
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  
+  // Fallback for Brave browser - also listen on document
+  document.addEventListener('scroll', handleScroll, { passive: true });
+  
+  // Additional fallback for some browsers
+  if (document.documentElement) {
+    document.documentElement.addEventListener('scroll', handleScroll, { passive: true });
+  }
+  
+  // Show header when user hovers near top of viewport
+  document.addEventListener('mouseenter', (e) => {
+    if (e.clientY < 100) {
+      header.classList.remove('header-hidden');
+      header.classList.add('header-visible');
+    }
+  });
+  
+  // Show header when user stops scrolling for a moment
+  let stopScrollTimeout;
+  window.addEventListener('scroll', () => {
+    clearTimeout(stopScrollTimeout);
+    stopScrollTimeout = setTimeout(() => {
+      header.classList.remove('header-hidden');
+      header.classList.add('header-visible');
+    }, 1500); // Show header after 1.5 seconds of no scrolling
+  }, { passive: true });
+  
+  // Handle window resize - disable on mobile
+  window.addEventListener('resize', () => {
+    const newIsMobile = window.innerWidth <= 768;
+    if (newIsMobile !== isMobile) {
+      if (newIsMobile) {
+        // Switched to mobile - show header
+        header.classList.remove('header-hidden');
+        header.classList.add('header-visible');
+      }
+    }
+  });
+  
+  // Initialize header state
+  updateHeaderVisibility();
+  
+  // Add a small delay to ensure everything is loaded
+  setTimeout(() => {
+    updateHeaderVisibility();
+  }, 100);
+  
+  // Expose test function for debugging
+  window.testHeaderScroll = function() {
+    console.log('Testing header scroll behavior...');
+    console.log('Current scroll position:', getScrollTop());
+    console.log('Header element:', header);
+    console.log('Header classes:', header.className);
+    console.log('Is Brave browser:', isBrave);
+    
+    // Test hiding
+    header.classList.remove('header-visible');
+    header.classList.add('header-hidden');
+    console.log('Header should be hidden now');
+    
+    // Test showing after 2 seconds
+    setTimeout(() => {
+      header.classList.remove('header-hidden');
+      header.classList.add('header-visible');
+      console.log('Header should be visible now');
+    }, 2000);
+  };
+  
+  // Debug info
+  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    console.log('Header scroll behavior initialized');
+    console.log('Browser:', navigator.userAgent);
+    console.log('Is Brave:', isBrave);
+    console.log('Initial scroll position:', getScrollTop());
+    console.log('Scroll sensitivity:', isBrave ? 1 : 3);
+  }
 }
 
 /**

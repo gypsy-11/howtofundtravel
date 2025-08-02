@@ -124,6 +124,7 @@
 
                     <!-- Finding Remote Work Section -->
                     <section class="blog-section">
+                        
                         <h2>Finding Remote Work Opportunities:</h2>
 
                         <p>There are numerous online platforms where you can find remote work opportunities:</p>
@@ -157,9 +158,7 @@
 
                         <p>Remote work is a fantastic springboard for a location-independent lifestyle. It not only allows you to travel but also opens doors to other income streams, like affiliate marketing or starting an online business.</p>
 
-                        <div class="callout-box">
-                            <p><em>Side note: It's a lot less stressful building your side incomes when you have a steady income stream. It's even better if it's a remote role since you can then leverage lower cost-of-living countries while you build out your ultimate lifestyle.</em></p>
-                        </div>
+                        <p><em>Side note: It's a lot less stressful building your side incomes when you have a steady income stream. It's even better if it's a remote role since you can then leverage lower cost-of-living countries while you build out your ultimate lifestyle.</em></p>
                     </section>
 
                     <!-- Conclusion Section -->
@@ -172,6 +171,7 @@
                     <!-- Resources Section -->
                     <section class="blog-section resources-section">
                         <h2>Recommended Resources: </h2>
+                        <p>xyz</p>
                         <!-- Course Links Container -->
                         <div id="course-links-container"></div>
                     </section>
@@ -183,10 +183,16 @@
     <!-- Scripts -->
     <script src="../js/main.js" defer></script>
     
-    <!-- Link System Initialization -->
+    <!-- Template and Link System Initialization -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM loaded, initializing links...');
+            console.log('DOM loaded, initializing templates and links...');
+            
+            // Initialize template manager
+            if (typeof TemplateManager !== 'undefined') {
+                const templateManager = new TemplateManager();
+                templateManager.init();
+            }
             
             // Check if containers exist
             const jobContainer = document.getElementById('job-links-container');

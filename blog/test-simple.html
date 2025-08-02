@@ -10,41 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/blog.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/blog.css">
+    
+    <!-- Template Include System -->
+    <script src="../js/template-includes.js" defer></script>
 </head>
 <body class="blog-post">
-    <!-- Simple Header -->
-    <header class="site-header">
-        <div class="container">
-            <nav class="main-nav" aria-label="Main Navigation">
-                <a href="/" class="logo" aria-label="How to Fund Travel Home">
-                    <img src="/images/how-to-fund-travel-logo-transparent.svg" alt="How to Fund Travel Logo" width="150" height="32">
-                </a>
-                
-                <button class="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
-                    <span class="sr-only">Menu</span>
-                    <span class="hamburger"></span>
-                </button>
-                
-                <ul class="nav-links">
-                    <li><a href="/" data-nav="home">Home</a></li>
-                    <li><a href="/blog/" data-nav="blog" class="active">Blog</a></li>
-                    <li><a href="/about.html" data-nav="about">About Me</a></li>
-                </ul>
-                
-                <div class="header-actions">
-                    <div class="search-container">
-                        <input type="text" placeholder="Search travel funding tips..." class="search-input">
-                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M15.5 14h-.79l-.28-.27c.98-1.14 1.57-2.62 1.57-4.23 0-3.59-2.91-6.5-6.5-6.5S2.5 5.91 2.5 9.5s2.91 6.5 6.5 6.5c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-                        </svg>
-                    </div>
-                    <a href="/#newsletter" class="btn btn-primary subscribe-btn">Subscribe</a>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <!-- Header and Footer will be automatically included by template-includes.js -->
     
     <main id="main-content">
         <article class="blog-post-content">
@@ -92,50 +65,5 @@
             </div>
         </article>
     </main>
-
-    <!-- Simple Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="/" class="footer-logo">
-                        <img src="/images/how-to-fund-travel-logo-white.svg" alt="How to Fund Travel Logo" width="160" height="35">
-                    </a>
-                    <p class="footer-tagline">Helping families achieve location independence and fund their travel lifestyle.</p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-nav">
-                        <h3>Navigation</h3>
-                        <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/blog/">Blog</a></li>
-                            <li><a href="/about.html">About</a></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="footer-newsletter">
-                    <h3>Stay Connected</h3>
-                    <p>Join our community of freedom seekers and receive travel funding tips.</p>
-                    <a href="/#newsletter" class="btn btn-secondary">Subscribe</a>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; <script>document.write(new Date().getFullYear())</script> How to Fund Travel. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="/js/main.js" defer></script>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Simple test page loaded');
-            console.log('Fonts should be loaded:', document.fonts.status);
-            console.log('CSS variables should be working');
-        });
-    </script>
 </body>
 </html> 

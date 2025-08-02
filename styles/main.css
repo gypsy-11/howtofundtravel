@@ -264,6 +264,30 @@ ul {
   box-shadow: var(--shadow-sm);
   padding: var(--space-sm) 0;
   border-bottom: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Header scroll behavior */
+.site-header.header-hidden {
+  transform: translateY(-100%);
+  visibility: visible; /* Keep visible for screen readers */
+}
+
+.site-header.header-visible {
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Ensure header is always visible when mobile menu is open */
+body.nav-open .site-header {
+  transform: translateY(0) !important;
+}
+
+/* Smooth transition for header visibility */
+.site-header {
+  will-change: transform;
+  backface-visibility: hidden; /* Improve performance */
+  -webkit-backface-visibility: hidden;
 }
 
 .main-nav {
