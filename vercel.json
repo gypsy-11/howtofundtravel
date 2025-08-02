@@ -28,6 +28,10 @@
     {
       "src": "templates/**",
       "use": "@vercel/static"
+    },
+    {
+      "src": "examples/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -46,6 +50,10 @@
     {
       "src": "/digital-nomad-parents",
       "dest": "/digital-nomad-parents.html"
+    },
+    {
+      "src": "/examples/(.*)",
+      "dest": "/examples/$1"
     },
     {
       "src": "/(.*)",
