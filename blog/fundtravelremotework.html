@@ -275,16 +275,10 @@
     <!-- Scripts -->
     <script src="../js/main.js" defer></script>
     
-    <!-- Template and Link System Initialization -->
+    <!-- Link System Initialization -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM loaded, initializing templates and links...');
-            
-            // Initialize template manager
-            if (typeof TemplateManager !== 'undefined') {
-                const templateManager = new TemplateManager();
-                templateManager.init();
-            }
+            console.log('DOM loaded, initializing link systems...');
             
             // Check if containers exist
             const jobContainer = document.getElementById('job-links-container');
