@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Nomads Hero - Screenshot</title>
+    
+    <!-- Custom Font for Lemon Tuesday -->
+    <style>
+        @font-face {
+            font-family: 'Lemon Tuesday';
+            src: url('fonts/Lemon Tuesday.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    
+    <style>
+        /* Brand Colors */
+        :root {
+            --brand-green: #2A9D8F;
+            --brand-green-dark: #1A8D7F;
+            --brand-yellow: #F9C74F;
+            --brand-yellow-hover: #F4A261;
+            --brand-sand: rgba(139, 87, 42, 0.11);
+            --brand-sand-solid: #8B572A;
+            --brand-black: #333333;
+            --brand-white: #FFFFFF;
+        }
+        
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 600;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background-image: url("https://d1yei2z3i6k35z.cloudfront.net/4676148/64d34d0dcfa4d_IMG_5266.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-subtitle {
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: white !important;
+        }
+        
+        .hero-title {
+            font-family: 'Lemon Tuesday', 'Great Vibes', cursive;
+            font-size: 5rem;
+            font-weight: normal;
+            margin-bottom: 30px;
+            line-height: 1.2;
+            color: white !important;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            letter-spacing: 0.02em;
+            text-transform: none;
+        }
+        
+        .hero-description {
+            font-size: 18px;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: white !important;
+        }
+        
+        .vibe-statement {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 15px 25px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-weight: 500;
+            color: white !important;
+            font-size: 15px;
+            max-width: 700px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3.5rem;
+                font-weight: 400;
+            }
+            
+            .vibe-statement {
+                font-size: 13px;
+                padding: 12px 18px;
+            }
+        }
+    </style>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Poppins:wght@700;800;900&family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <p class="hero-subtitle">Ready to build your digital empire?</p>
+            <h1 class="hero-title">Vibe Nomads</h1>
+            <p class="hero-description">Build Epic Websites & Apps (No Coding Required) to Fund Your Travels</p>
+            
+            <div class="vibe-statement">
+                ✨ We're digital nomads who don't know how to code but we know how to build epic websites, tools and apps + have the SEO and marketing skills to ensure our side hustle gigs can fund our travels
+            </div>
+        </div>
+    </section>
+</body>
+</html> 
