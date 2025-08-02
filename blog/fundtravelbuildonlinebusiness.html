@@ -31,6 +31,7 @@
     <!-- Link System Scripts -->
     <script src="../links/course-links.js" defer></script>
     <script src="../links/affiliate-links.js" defer></script>
+    <script src="../links/freebie-links.js" defer></script>
     <script src="../links/include-disclaimer.js" defer></script>
 </head>
 <body class="blog-post">
@@ -169,6 +170,15 @@
                         <div id="course-links-container"></div>
                     </section>
 
+                    <!-- Free Resources Section -->
+                    <section class="blog-section">
+                        <h2>Free Resources to Get Started:</h2>
+                        <p>Before investing in paid courses, check out these free resources to help you get started:</p>
+                        
+                        <!-- Freebie Links Container -->
+                        <div id="freebie-links-container"></div>
+                    </section>
+
                     <!-- Conclusion Section -->
                     <section class="blog-section">
                         <h2>Your Journey to Location Independence Starts Here</h2>
@@ -198,14 +208,23 @@
             
             // Check if containers exist
             const courseContainer = document.getElementById('course-links-container');
+            const freebieContainer = document.getElementById('freebie-links-container');
             
             console.log('Course container found:', !!courseContainer);
+            console.log('Freebie container found:', !!freebieContainer);
             
             // Load course links in the course-links-container
             if (typeof loadCourseLinks === 'function') {
                 loadCourseLinks('course-links-container');
             } else {
                 console.error('loadCourseLinks function not found');
+            }
+            
+            // Load freebie links in the freebie-links-container
+            if (typeof loadFreebieLinks === 'function') {
+                loadFreebieLinks('freebie-links-container');
+            } else {
+                console.error('loadFreebieLinks function not found');
             }
         });
     </script>

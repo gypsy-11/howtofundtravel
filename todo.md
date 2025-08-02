@@ -7,7 +7,9 @@
   - This is currently temporary for development/testing purposes
 
 ## Link Setup Tasks
-- [ ] Set up affiliate links properly
+- [x] **Update Stan Store affiliate links to point to local roadmap page** - Replaced external Stan Store URLs with local `/the-roadmap.html` links
+  - Updated `links/affiliate-links.json` - roadmap-course entry
+  - Updated `links/course-links.json` - the-roadmap entry
 - [ ] Test all link functionality
 - [ ] Ensure all redirects work correctly
 - [ ] Verify tracking and analytics are working
