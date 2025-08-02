@@ -26,3 +26,9 @@ yarn-error.log*
 
 # Configuration guides
 /configuration-guides/
+
+# Work in progress and strategy content
+/work-in-progress/
+/content-and-strategy/
+/drafts/
+/examples/
