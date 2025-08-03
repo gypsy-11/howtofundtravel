@@ -5,7 +5,9 @@
   "main": "waitlist-handler.js",
   "scripts": {
     "start": "node waitlist-handler.js",
-    "dev": "nodemon waitlist-handler.js"
+    "dev": "nodemon waitlist-handler.js",
+    "visa": "node visa-guide-handler.js",
+    "dev-visa": "nodemon visa-guide-handler.js"
   },
   "dependencies": {
     "express": "^4.18.2",

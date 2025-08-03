@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "functions": {
+    "api/submit-visa-guide.js": {
+      "runtime": "nodejs18.x"
+    },
+    "api/health.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/submit-visa-guide",
+      "dest": "/api/submit-visa-guide.js"
+    },
+    {
+      "src": "/api/health",
+      "dest": "/api/health.js"
+    }
+  ]
+} 

@@ -16,6 +16,7 @@ function initializeBlogFunctionality() {
   initBlogSearch();
   initCategoryFiltering();
   initUrlCategoryFilter();
+  initUrlSearchFilter();
 }
 
 /**
@@ -477,4 +478,40 @@ function updatePostsCounter(postsContainer) {
   if (postsTotalElement) {
     postsTotalElement.textContent = postsTotal;
   }
+}
+
+/**
+ * Initialize URL-based search filtering
+ * Handles search when page loads with URL parameters from global search
+ */
+function initUrlSearchFilter() {
+  console.log('Initializing URL search filter...');
+  
+  // Get search term from URL parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const searchTerm = urlParams.get('s');
+  
+  if (!searchTerm) {
+    console.log('No search parameter found in URL');
+    return;
+  }
+  
+  console.log('Search parameter found:', searchTerm);
+  
+  // Wait for blog search to be initialized
+  setTimeout(() => {
+    const searchInput = document.querySelector('#blog-search');
+    if (searchInput) {
+      console.log('Found search input, setting value and triggering search:', searchTerm);
+      searchInput.value = searchTerm;
+      
+      // Trigger the search
+      const searchForm = document.querySelector('.search-form');
+      if (searchForm) {
+        searchForm.dispatchEvent(new Event('submit'));
+      }
+    } else {
+      console.log('Search input not found');
+    }
+  }, 1000); // Give time for other initialization to complete
 } 
