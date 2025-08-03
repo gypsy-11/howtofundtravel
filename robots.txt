@@ -29,4 +29,4 @@ Disallow: /configuration-guides/
 Disallow: /content-and-strategy/
 
 # Sitemap location
-Sitemap: https://howtofundtravel.com/sitemap.xml 
+Sitemap: https://howtofund.travel/sitemap.xml 
