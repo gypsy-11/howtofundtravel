@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+
+# Allow all major search engines and LLMs
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /server/
+Disallow: /node_modules/
+Disallow: /drafts/
+Disallow: /work-in-progress/
+Disallow: /configuration-guides/
+Disallow: /content-and-strategy/
+
+# Sitemap location
+Sitemap: https://howtofundtravel.com/sitemap.xml 
