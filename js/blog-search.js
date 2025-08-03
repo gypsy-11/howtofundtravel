@@ -15,6 +15,7 @@ function initializeBlogFunctionality() {
   console.log('Initializing blog functionality...');
   initBlogSearch();
   initCategoryFiltering();
+  initUrlCategoryFilter();
 }
 
 /**
@@ -417,6 +418,47 @@ function getCategoryDisplayName(category) {
   };
   
   return categoryNames[category] || category;
+}
+
+/**
+ * Initialize URL-based category filtering
+ * Handles category filtering when page loads with URL parameters
+ */
+function initUrlCategoryFilter() {
+  console.log('Initializing URL category filter...');
+  
+  // Get category from URL parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const categoryParam = urlParams.get('category');
+  
+  if (!categoryParam) {
+    console.log('No category parameter found in URL');
+    return;
+  }
+  
+  console.log('Category parameter found:', categoryParam);
+  
+  // Wait for category filtering to be initialized
+  setTimeout(() => {
+    // Find the corresponding category button
+    const categoryButton = document.querySelector(`.category-btn[data-category="${categoryParam}"]`);
+    
+    if (categoryButton) {
+      console.log('Found category button, triggering click:', categoryParam);
+      // Trigger the category button click
+      categoryButton.click();
+      
+      // Scroll to the posts section for better UX
+      const postsSection = document.querySelector('.all-posts');
+      if (postsSection) {
+        setTimeout(() => {
+          postsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 300);
+      }
+    } else {
+      console.log('Category button not found for:', categoryParam);
+    }
+  }, 500); // Give time for other initialization to complete
 }
 
 /**
