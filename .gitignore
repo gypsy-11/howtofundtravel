@@ -32,3 +32,6 @@ yarn-error.log*
 /content-and-strategy/
 /drafts/
 /examples/
+
+# Efficiency and planning documents
+/todo-efficiency/
