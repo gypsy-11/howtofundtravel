@@ -4,9 +4,6 @@
     "api/subscribe.js": {
       "runtime": "@vercel/node@3.0.0"
     },
-    "server/api/submit-visa-guide.js": {
-      "runtime": "@vercel/node@3.0.0"
-    },
     "server/api/health.js": {
       "runtime": "@vercel/node@3.0.0"
     }
@@ -16,10 +13,7 @@
       "src": "/api/subscribe",
       "dest": "/api/subscribe.js"
     },
-    {
-      "src": "/api/submit-visa-guide",
-      "dest": "/server/api/submit-visa-guide.js"
-    },
+
     {
       "src": "/api/health",
       "dest": "/server/api/health.js"
