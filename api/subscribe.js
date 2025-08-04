@@ -1,4 +1,7 @@
 export default async function handler(req, res) {
+  console.log('Method:', req.method);
+  console.log('Body:', req.body);
+  
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
   }
@@ -29,4 +32,4 @@ export default async function handler(req, res) {
   } catch (error) {
     return res.status(500).json({ message: 'Error subscribing to newsletter' });
   }
-} 
+}
