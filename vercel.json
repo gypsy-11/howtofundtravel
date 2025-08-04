@@ -4,7 +4,7 @@
     "api/subscribe.js": {
       "runtime": "@vercel/node@3.0.0"
     },
-    "server/api/health.js": {
+    "api/health.js": {
       "runtime": "@vercel/node@3.0.0"
     }
   },
@@ -16,7 +16,7 @@
 
     {
       "src": "/api/health",
-      "dest": "/server/api/health.js"
+      "dest": "/api/health.js"
     },
     {
       "src": "/",
