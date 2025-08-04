@@ -1,0 +1,9 @@
+{
+  "name": "howtofundtravel-api",
+  "version": "1.0.0",
+  "description": "API functions for How to Fund Travel",
+  "main": "subscribe.js",
+  "engines": {
+    "node": "18.x"
+  }
+} 
