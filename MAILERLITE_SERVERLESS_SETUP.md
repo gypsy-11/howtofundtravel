@@ -62,7 +62,28 @@ export default async function handler(req, res) {
 - **Environment Variables**: Uses `MAILERLITE_API_KEY` for authentication
 - **Error Handling**: Proper error responses for different scenarios
 
-## Step 3: Update HTML Form
+## Step 3: Configure Vercel for Serverless Functions
+
+We need to update the `vercel.json` file to tell Vercel how to handle the serverless functions.
+
+Add this configuration to your `vercel.json` file:
+
+```json
+{
+  "functions": {
+    "api/subscribe.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
+}
+```
+
+This tells Vercel to:
+- Recognize `api/subscribe.js` as a serverless function
+- Use Node.js 18.x runtime to execute it
+- Make it accessible at the `/api/subscribe` endpoint
+
+## Step 4: Update HTML Form
 
 We replaced the existing newsletter form in `index.html` with a new form that connects to the serverless function.
 
@@ -140,7 +161,7 @@ document.getElementById('email-form').addEventListener('submit', async function(
 - **Success Feedback**: Shows success message and clears form
 - **API Integration**: Posts to `/api/subscribe` endpoint
 
-## Step 4: Deploy and Test Your Integration
+## Step 5: Deploy and Test Your Integration
 
 ### 1. Environment Variables Setup
 You'll need to set up the `MAILERLITE_API_KEY` environment variable in your Vercel deployment:
@@ -159,7 +180,7 @@ To get your MailerLite API key:
 ### 3. Deploy and Test
 Great! Now let's test and deploy.
 
-**Step 4: Deploy and test your integration**
+**Step 5: Deploy and test your integration**
 
 1. **Commit and push your changes to GitHub:**
    ```bash
@@ -191,6 +212,7 @@ Try the test now and let me know how it goes!
 howtofundtravel/
 ├── api/
 │   └── subscribe.js          # MailerLite serverless function
+├── vercel.json              # Updated with function configuration
 ├── index.html               # Updated with new form
 └── MAILERLITE_SERVERLESS_SETUP.md  # This documentation
 ```
