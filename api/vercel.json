@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "subscribe.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
+} 
