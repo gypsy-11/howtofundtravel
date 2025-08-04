@@ -12,6 +12,9 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: 'Email is required' });
   }
 
+  // Visa guide download group ID
+  const VISA_GUIDE_GROUP_ID = '161603580674966558';
+
   try {
     const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
       method: 'POST',
@@ -20,16 +23,25 @@ export default async function handler(req, res) {
         'Authorization': `Bearer ${process.env.MAILERLITE_API_KEY}`
       },
       body: JSON.stringify({
-        email: email
+        email: email,
+        groups: [VISA_GUIDE_GROUP_ID],
+        fields: {
+          source: 'newsletter_signup',
+          signup_date: new Date().toISOString()
+        }
       })
     });
 
     if (response.ok) {
+      console.log(`Successfully added ${email} to visa guide download group`);
       return res.status(200).json({ message: 'Successfully subscribed!' });
     } else {
+      const errorData = await response.json();
+      console.error('MailerLite API error:', errorData);
       throw new Error('Failed to subscribe');
     }
   } catch (error) {
+    console.error('Error subscribing to newsletter:', error);
     return res.status(500).json({ message: 'Error subscribing to newsletter' });
   }
 }
