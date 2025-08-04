@@ -3,46 +3,26 @@
   "functions": {
     "api/subscribe.js": {
       "runtime": "nodejs18.x"
+    },
+    "server/api/submit-visa-guide.js": {
+      "runtime": "nodejs18.x"
+    },
+    "server/api/health.js": {
+      "runtime": "nodejs18.x"
     }
   },
-  "builds": [
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "styles/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "js/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "images/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "blog/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "links/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "templates/**",
-      "use": "@vercel/static"
-    }
-  ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
+      "src": "/api/subscribe",
+      "dest": "/api/subscribe.js"
+    },
+    {
+      "src": "/api/submit-visa-guide",
+      "dest": "/server/api/submit-visa-guide.js"
+    },
+    {
+      "src": "/api/health",
+      "dest": "/server/api/health.js"
     },
     {
       "src": "/",
