@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "buildCommand": "echo 'No build step required for static HTML'",
+  "outputDirectory": ".",
   "functions": {
     "api/subscribe.js": {
       "runtime": "@vercel/node@3.0.0"
