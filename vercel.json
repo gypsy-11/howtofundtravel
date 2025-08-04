@@ -1,52 +1,7 @@
 {
-  "version": 2,
-  "buildCommand": "echo 'No build step required for static HTML'",
-  "outputDirectory": ".",
   "functions": {
-    "api/subscribe.js": {
-      "runtime": "@vercel/node@3.0.0"
-    },
-    "api/health.js": {
-      "runtime": "@vercel/node@3.0.0"
+    "api/*.js": {
+      "runtime": "nodejs18.x"
     }
-  },
-  "routes": [
-    {
-      "src": "/api/subscribe",
-      "dest": "/api/subscribe.js"
-    },
-
-    {
-      "src": "/api/health",
-      "dest": "/api/health.js"
-    },
-    {
-      "src": "/",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/blog",
-      "dest": "/blog/index.html"
-    },
-    {
-      "src": "/blog/",
-      "dest": "/blog/index.html"
-    },
-    {
-      "src": "/digital-nomad-parents",
-      "dest": "/digital-nomad-parents.html"
-    },
-    {
-      "src": "/sitemap.xml",
-      "dest": "/sitemap.xml"
-    },
-    {
-      "src": "/robots.txt",
-      "dest": "/robots.txt"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ]
+  }
 }
