@@ -110,8 +110,22 @@
                     </div>
                     
                     <div class="hero-cta">
-                        <a href="#start" class="btn btn-primary">Start Your Journey</a>
+                        <button id="start-journey-btn" class="btn btn-primary">Start Your Journey</button>
                         <a href="blog/" class="btn btn-outline-light">Read Success Stories</a>
+                    </div>
+                    
+                    <!-- Newsletter Signup Modal -->
+                    <div id="newsletter-modal" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h3>Join Our Newsletter</h3>
+                            <p>Get weekly insights on funding travel, building location independence, and living your dream life with your family.</p>
+                            <form id="newsletter-form">
+                                <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                                <button type="submit" id="newsletter-submit-btn" class="btn btn-primary">Subscribe</button>
+                            </form>
+                            <div id="newsletter-message" style="margin-top: 10px; display: none;"></div>
+                        </div>
                     </div>
                 </div>
             </div>

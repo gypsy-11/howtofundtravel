@@ -2,6 +2,28 @@
 
 This document records the complete process of setting up a MailerLite serverless function for newsletter subscriptions on the How to Fund Travel website.
 
+## Before You Start
+
+**Important Setup Recommendation**: Before following this guide, we strongly recommend organizing your HTML files in a `/public` folder. This is a Vercel best practice that will save you significant headaches:
+
+### Why Use a `/public` Folder?
+- **Automatic Static File Serving**: Vercel automatically serves files from `/public` as static assets
+- **Cleaner Project Structure**: Separates your serverless functions from your static content
+- **Simplified Routing**: No need for complex configuration to serve HTML files
+- **Better Performance**: Static files are served directly without going through serverless functions
+
+### If You Don't Have a `/public` Folder Yet:
+1. Create a `public` folder in your project root
+2. Move your HTML files (like `index.html`) into the `public` folder
+3. Update your `vercel.json` to include:
+   ```json
+   {
+     "public": true
+   }
+   ```
+
+This setup will make the rest of this guide much smoother and prevent common deployment issues.
+
 ## Overview
 
 We created a serverless function that handles newsletter subscriptions by integrating with the MailerLite API. The function is deployed on Vercel and connects to a form on the main website.
