@@ -18,6 +18,9 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles/main.css">
     
+    <!-- Template Include System -->
+    <script src="js/template-includes.js" defer></script>
+    
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DPJ8XP3RBD"></script>
     <script>
@@ -26,142 +29,147 @@
         gtag('js', new Date());
         gtag('config', 'G-DPJ8XP3RBD');
     </script>
+    
+    <style>
+        .thank-you-section {
+            padding: 4rem 0;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .thank-you-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .success-icon {
+            margin-bottom: 2rem;
+        }
+        
+        .success-icon svg {
+            width: 64px;
+            height: 64px;
+            color: var(--success);
+        }
+        
+        .thank-you-content h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .thank-you-content p {
+            color: var(--medium);
+            font-size: 1.125rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        .download-button-container {
+            margin-bottom: 2rem;
+        }
+        
+        .btn-large {
+            padding: 1.25rem 2.5rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+        
+        .instructions {
+            background: var(--light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: left;
+            margin-top: 2rem;
+        }
+        
+        .instructions h4 {
+            color: var(--dark);
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .instructions ol {
+            color: var(--medium);
+            font-size: 1rem;
+            line-height: 1.6;
+            padding-left: 1.5rem;
+        }
+        
+        .instructions li {
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .thank-you-content {
+                padding: 2rem 1.5rem;
+                margin: 0 1rem;
+            }
+            
+            .thank-you-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="./" class="logo">
-                    <img src="images/how-to-fund-travel-logo-transparent.svg" alt="How to Fund Travel" width="200" height="50">
-                </a>
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li><a href="blog/">Blog</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="book-a-call.html">Book a Call</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
+    <!-- Header will be included here by template-includes.js -->
+    
     <!-- Main Content -->
     <main class="main">
         <section class="thank-you-section">
             <div class="container">
                 <div class="thank-you-content">
                     <div class="success-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="10" stroke="#10B981" stroke-width="2"/>
-                            <path d="M9 12l2 2 4-4" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     
                     <h1>Thank You! 🎉</h1>
-                    <h2>Your Job Sites Bookmarks are ready!</h2>
+                    <p>Your Job Sites Bookmarks are ready! Check your email for additional remote work tips and resources.</p>
                     
-                    <div class="email-info">
-                        <p><strong>Check your email inbox</strong> (and spam folder) for additional remote work tips and resources.</p>
-                        <p>You'll receive:</p>
-                        <ul>
-                            <li>✅ Weekly remote job opportunities</li>
-                            <li>✅ Digital nomad lifestyle tips</li>
-                            <li>✅ Online business strategies</li>
-                            <li>✅ Exclusive job board recommendations</li>
-                        </ul>
+                    <div class="download-button-container">
+                        <button id="downloadBookmarks" class="btn btn-primary btn-large">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="7,10 12,15 17,10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Download Job Sites Bookmarks
+                        </button>
                     </div>
                     
-                    <div class="download-section">
-                        <h3>Download Your Bookmarks File</h3>
-                        <p>Click the button below to download your Job Sites Bookmarks file. This HTML file contains 30+ remote job sites that you can import into your browser bookmarks.</p>
-                        
-                        <div class="download-button-container">
-                            <button id="downloadBookmarks" class="btn btn-primary btn-large">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <polyline points="7,10 12,15 17,10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                Download Job Sites Bookmarks
-                            </button>
-                        </div>
-                        
-                        <div class="instructions">
-                            <h4>How to use your bookmarks file:</h4>
-                            <ol>
-                                <li>Click the download button above</li>
-                                <li>Open your browser's bookmarks manager</li>
-                                <li>Look for "Import bookmarks" or "Import HTML"</li>
-                                <li>Select the downloaded file</li>
-                                <li>All 30+ job sites will be added to your bookmarks!</li>
-                            </ol>
-                        </div>
-                    </div>
-                    
-                    <div class="next-steps">
-                        <h3>What's Next?</h3>
-                        <div class="steps-grid">
-                            <div class="step">
-                                <div class="step-number">1</div>
-                                <h4>Import Your Bookmarks</h4>
-                                <p>Add all the remote job sites to your browser bookmarks for easy access.</p>
-                            </div>
-                            <div class="step">
-                                <div class="step-number">2</div>
-                                <h4>Start Your Job Search</h4>
-                                <p>Visit these specialized platforms to find remote opportunities with less competition.</p>
-                            </div>
-                            <div class="step">
-                                <div class="step-number">3</div>
-                                <h4>Stay Updated</h4>
-                                <p>Check your email for weekly remote job opportunities and digital nomad tips.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cta-buttons">
-                        <a href="blog/35-remote-work-sites-for-2025.html" class="btn btn-secondary">Read the Full Article</a>
-                        <a href="book-a-call.html" class="btn btn-primary">Book a Free Call</a>
-                    </div>
-                    
-                    <div class="social-proof">
-                        <p><em>"These job sites helped me land a remote position that doubled my income while traveling with my family!"</em> - Sarah, Digital Nomad Mom</p>
+                    <div class="instructions">
+                        <h4>How to use your bookmarks file:</h4>
+                        <ol>
+                            <li>Click the download button above</li>
+                            <li>Open your browser's bookmarks manager</li>
+                            <li>Look for "Import bookmarks" or "Import HTML"</li>
+                            <li>Select the downloaded file</li>
+                            <li>All 30+ job sites will be added to your bookmarks!</li>
+                        </ol>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>How to Fund Travel</h4>
-                    <p>Expert tips and strategies for funding family travel through remote work, online business, and smart investments.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="blog/">Blog</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="book-a-call.html">Book a Call</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="https://instagram.com/fulltimefamilytravel" target="_blank" rel="noopener">Instagram</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 How to Fund Travel. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer will be included here by template-includes.js -->
 
     <script>
         document.getElementById('downloadBookmarks').addEventListener('click', function() {
