@@ -24,12 +24,10 @@
 /* Blog Hero Section - Improved spacing and structure */
 .blog-hero {
     position: relative;
-    padding: 6rem 0 0; /* Removed bottom padding completely to eliminate gap */
+    padding: 0; /* Remove padding to use absolute positioning */
     background: url('../images/ocean-shores-transparency.png') no-repeat center center;
     background-size: cover;
     min-height: 60vh;
-    display: flex;
-    align-items: center;
     color: var(--dark);
     margin-top: 0; /* Ensure no margin to prevent gaps */
 }
@@ -47,10 +45,13 @@
 } */
 
 .blog-hero-content {
-    position: relative;
+    position: absolute;
+    top: 15%; /* Use percentage to position in upper portion of hero */
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 2;
     max-width: 800px;
-    margin: 0 auto;
+    width: calc(100% - 2rem); /* Full width minus margins */
     background: rgba(255, 255, 255, 0.9);
     padding: 2.5rem; /* Increased padding for better spacing */
     border-radius: var(--radius-lg);
@@ -63,7 +64,7 @@
 
 .blog-hero-text h1 {
     color: var(--dark);
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-size: clamp(1.75rem, 4vw, 2.5rem); /* Further reduced from 2rem-3rem to 1.75rem-2.5rem */
     line-height: 1.1;
     margin-bottom: 1.5rem;
     font-weight: 700;
@@ -73,7 +74,7 @@
     color: var(--medium);
     font-size: 1.125rem;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem; /* Reduced from 2rem to 1rem to bring text closer to bottom of card */
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -132,6 +133,7 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 0 1rem;
+    margin-top: 4rem; /* Add top margin to create space between hero and body content */
 }
 
 /* Blog Sections */
@@ -351,17 +353,18 @@
     }
     
     .blog-hero {
-        padding: 4rem 0 2rem; /* Reduced padding for mobile */
+        padding: 0; /* Remove padding to use absolute positioning */
         min-height: 50vh;
     }
     
     .blog-hero-content {
+        top: 10%; /* Use percentage for mobile positioning */
+        width: calc(100% - 1rem); /* Smaller margins for mobile */
         padding: 1.5rem;
-        margin: 0 1rem;
     }
     
     .blog-hero-text h1 {
-        font-size: clamp(2rem, 7vw, 2.8rem);
+        font-size: clamp(1.5rem, 5vw, 2.25rem); /* Further reduced from 1.75rem-2.5rem to 1.5rem-2.25rem */
     }
     
     .blog-hero-subtitle {
@@ -379,6 +382,7 @@
     
     .blog-post-body {
         padding: 0 0.5rem;
+        margin-top: 3rem; /* Reduced top margin for mobile */
     }
     
     .blog-section {
@@ -1424,4 +1428,443 @@
 .post-category-badge:hover {
   background: rgba(42, 157, 143, 1);
   transform: scale(1.05);
+}
+
+/* Lead Magnet Section */
+.lead-magnet-section {
+    margin: 3rem 0;
+}
+
+.lead-magnet-container {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.lead-magnet-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
+}
+
+.lead-magnet-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.lead-magnet-icon {
+    margin-bottom: 1.5rem;
+}
+
+.lead-magnet-content h2 {
+    color: var(--dark);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.lead-magnet-content p {
+    color: var(--medium);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.lead-magnet-benefits {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.lead-magnet-benefits h3 {
+    color: var(--dark);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.lead-magnet-benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lead-magnet-benefits li {
+    color: var(--medium);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    padding-left: 0;
+}
+
+.lead-magnet-form {
+    margin-bottom: 1.5rem;
+}
+
+.lead-magnet-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.lead-magnet-form input[type="email"] {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.lead-magnet-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.1);
+}
+
+.lead-magnet-form .btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.lead-magnet-form .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.lead-magnet-footer {
+    color: var(--medium);
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+/* Thank You Page Styles */
+.thank-you-section {
+    padding: 4rem 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.thank-you-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.success-icon {
+    margin-bottom: 2rem;
+}
+
+.thank-you-content h1 {
+    color: var(--primary);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.thank-you-content h2 {
+    color: var(--dark);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.email-info {
+    background: var(--light);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.email-info p {
+    color: var(--medium);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.email-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.email-info li {
+    color: var(--medium);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    padding-left: 0;
+}
+
+.download-section {
+    background: var(--primary-light);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.download-section h3 {
+    color: var(--dark);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.download-section p {
+    color: var(--medium);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.download-button-container {
+    margin-bottom: 1.5rem;
+}
+
+.btn-large {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.btn-success {
+    background: var(--success);
+    color: white;
+}
+
+.instructions {
+    background: white;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.instructions h4 {
+    color: var(--dark);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.instructions ol {
+    color: var(--medium);
+    font-size: 1rem;
+    line-height: 1.6;
+    padding-left: 1.5rem;
+}
+
+.instructions li {
+    margin-bottom: 0.5rem;
+}
+
+.next-steps {
+    margin-bottom: 2rem;
+}
+
+.next-steps h3 {
+    color: var(--dark);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.step {
+    background: var(--light);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin: 0 auto 1rem;
+}
+
+.step h4 {
+    color: var(--dark);
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.step p {
+    color: var(--medium);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.social-proof {
+    background: var(--light);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    border-left: 4px solid var(--primary);
+}
+
+.social-proof p {
+    color: var(--medium);
+    font-style: italic;
+    margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .lead-magnet-container {
+        padding: 2rem 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .lead-magnet-content h2 {
+        font-size: 1.75rem;
+    }
+    
+    .lead-magnet-content p {
+        font-size: 1rem;
+    }
+    
+    .lead-magnet-benefits {
+        padding: 1rem;
+    }
+    
+    .thank-you-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .thank-you-content h1 {
+        font-size: 2rem;
+    }
+    
+    .thank-you-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* Job Platforms Table */
+.job-platforms-table {
+    margin: 2rem 0;
+    overflow-x: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+}
+
+.job-platforms-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 0.95rem;
+}
+
+.job-platforms-table thead {
+    background: var(--primary);
+    color: white;
+}
+
+.job-platforms-table th {
+    padding: 1rem 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.job-platforms-table td {
+    padding: 1rem 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+
+.job-platforms-table tbody tr:hover {
+    background: var(--light);
+}
+
+.job-platforms-table a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 0.25rem 0;
+}
+
+.job-platforms-table a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Mobile responsive for table */
+@media (max-width: 768px) {
+    .job-platforms-table {
+        font-size: 0.85rem;
+    }
+    
+    .job-platforms-table th,
+    .job-platforms-table td {
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .job-platforms-table th {
+        font-size: 0.8rem;
+    }
 } 

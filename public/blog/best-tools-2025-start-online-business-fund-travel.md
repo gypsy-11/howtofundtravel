@@ -4,7 +4,7 @@
 
 Want to start an online business that actually funds your travel dreams? You're not alone. But here's the thing – most people get overwhelmed by the endless tool options and never actually start.
 
-I've helped hundreds of digital nomads build profitable online businesses, and I've tested every tool under the sun. Today, I'm sharing the exact tools that will get you from zero to your first $1,000 (or more) while you travel.
+I've helped plenty of digital nomads build online businesses, and I've tested most of the tools out there. Today, I'm sharing the exact tools that will get you from zero to your first $1,000 (or more) while you travel.
 
 **Skip the trial and error. These are the tools that work.**
 
@@ -30,14 +30,14 @@ Ready to build the business that funds your next adventure? Let's go.
 
 **Pro tip:** Set up Stripe Atlas if you want to incorporate your business in the US while living abroad.
 
-### 2. **ConvertKit** - Email Marketing
-**Why it's essential:** Email marketing has a 4,200% ROI. That's not a typo. ConvertKit is built specifically for creators and small businesses.
+### 2. **MailerLite** - Email Marketing
+**Why it's essential:** Email marketing has a 4,200% ROI. That's not a typo. MailerLite is built specifically for beginners, creators and online businesses. Plus it integrates well with AI tools to help you get more out of your AI systems and set ups.
 
 **Best for:** Building an audience and selling digital products
 **Cost:** Free up to 1,000 subscribers, then $29/month
 **Travel-friendly:** ✅ Automated sequences work while you sleep
 
-**Pro tip:** Use ConvertKit's landing page builder to create high-converting opt-in pages without needing a separate tool.
+**Pro tip:** Connect your landing pages to MailerLite using your AI tools and the MailerLite MCP.
 
 ### 3. **Notion** - Business Management
 **Why it's essential:** Your business brain needs to be organized and accessible from anywhere. Notion is the digital nomad's best friend.
@@ -47,6 +47,8 @@ Ready to build the business that funds your next adventure? Let's go.
 **Travel-friendly:** ✅ Works offline, syncs when you reconnect
 
 **Pro tip:** Create templates for your most common workflows (content creation, client onboarding, etc.) to save hours every week.
+
+**Bonus:** There's a great Notion tool that can connect to Claude if you're using Claude AI.
 
 ## 💰 Revenue-Generating Tools
 
@@ -59,11 +61,11 @@ Ready to build the business that funds your next adventure? Let's go.
 
 **Pro tip:** Use Gumroad's built-in email marketing to nurture your customers and sell more products.
 
-### 5. **Calendly** - Appointment Scheduling
+### 5. **TidyCal** - Appointment Scheduling
 **Why it's essential:** Stop the back-and-forth emails. Let clients book calls with you automatically, regardless of your timezone.
 
 **Best for:** Consulting, coaching, and service-based businesses
-**Cost:** Free for basic use, $8/month for premium features
+**Cost:** $29 one time payment for premium features
 **Travel-friendly:** ✅ Automatically adjusts to your current timezone
 
 **Pro tip:** Set up different calendar types for different services (strategy calls, implementation, etc.).
