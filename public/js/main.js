@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize favicon for all pages
   initFavicon();
   
-  // Mobile Navigation Toggle
-  initMobileNav();
+  // Mobile Navigation Toggle - will be called after header template loads
+  // initMobileNav(); // Moved to template-includes.js
   
   // Header scroll behavior (hide/show on scroll)
   initHeaderScroll();
@@ -30,14 +30,30 @@ function initMobileNav() {
   const menuToggle = document.querySelector('.mobile-menu-toggle');
   const navLinks = document.querySelector('.nav-links');
   
-  if (!menuToggle || !navLinks) return;
+  console.log('initMobileNav: Initializing mobile navigation');
+  console.log('menuToggle:', menuToggle);
+  console.log('navLinks:', navLinks);
+  
+  if (!menuToggle || !navLinks) {
+    console.log('initMobileNav: Missing required elements, returning');
+    return;
+  }
+  
+  // Mark as initialized to prevent double initialization
+  menuToggle.setAttribute('data-initialized', 'true');
   
   menuToggle.addEventListener('click', () => {
+    console.log('Mobile menu toggle clicked');
     const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    
+    console.log('Current expanded state:', isExpanded);
+    console.log('Nav links classes before toggle:', navLinks.className);
     
     // Toggle the menu
     menuToggle.setAttribute('aria-expanded', !isExpanded);
     navLinks.classList.toggle('active');
+    
+    console.log('Nav links classes after toggle:', navLinks.className);
     
     // Prevent body scroll when menu is open
     document.body.classList.toggle('nav-open');
@@ -71,6 +87,9 @@ function initMobileNav() {
     }
   });
 }
+
+// Make initMobileNav globally accessible
+window.initMobileNav = initMobileNav;
 
 /**
  * Header scroll behavior - hide on scroll down, show on scroll up

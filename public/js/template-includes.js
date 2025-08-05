@@ -52,8 +52,10 @@ class TemplateManager {
             // Set active navigation state
             this.setActiveNavigation();
             
-            // Note: Mobile navigation will be initialized by main.js
-            // No need to call initMobileNav() here to avoid conflicts
+            // Initialize mobile navigation after header is loaded
+            if (typeof initMobileNav === 'function') {
+                initMobileNav();
+            }
         } catch (error) {
             console.error('Error loading header template:', error);
             // Fallback: create a simple header
@@ -263,6 +265,16 @@ class TemplateManager {
         await this.includeHeader();
         await this.includeFooter();
         console.log('TemplateManager: Initialization complete');
+        
+        // Fallback: Initialize mobile nav after a delay in case template system fails
+        setTimeout(() => {
+            if (document.querySelector('.mobile-menu-toggle') && !document.querySelector('.mobile-menu-toggle').hasAttribute('data-initialized')) {
+                console.log('Fallback: Initializing mobile navigation');
+                if (typeof initMobileNav === 'function') {
+                    initMobileNav();
+                }
+            }
+        }, 1000);
     }
 }
 

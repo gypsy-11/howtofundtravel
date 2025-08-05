@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Menu Test</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        /* Test styles */
+        body {
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .test-info {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .test-button {
+            background: #3BAEA0;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-info">
+        <h2>Mobile Menu Test Page</h2>
+        <p>This page tests the mobile menu functionality. Resize your browser to mobile width or use device emulation.</p>
+        <p>Current viewport width: <span id="viewport-width"></span></p>
+        <button class="test-button" onclick="testMobileMenu()">Test Mobile Menu</button>
+        <button class="test-button" onclick="checkElements()">Check Elements</button>
+    </div>
+
+    <!-- Header will be included here -->
+    <main>
+        <h1>Test Content</h1>
+        <p>This is test content to ensure the mobile menu works properly.</p>
+    </main>
+
+    <!-- Template Include System -->
+    <script src="js/template-includes.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Update viewport width
+        function updateViewportWidth() {
+            document.getElementById('viewport-width').textContent = window.innerWidth + 'px';
+        }
+        
+        // Test mobile menu functionality
+        function testMobileMenu() {
+            console.log('Testing mobile menu...');
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (menuToggle && navLinks) {
+                console.log('Elements found, triggering click...');
+                menuToggle.click();
+            } else {
+                console.log('Elements not found');
+            }
+        }
+        
+        // Check if elements exist
+        function checkElements() {
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            console.log('Menu toggle:', menuToggle);
+            console.log('Nav links:', navLinks);
+            
+            if (menuToggle) {
+                console.log('Menu toggle classes:', menuToggle.className);
+                console.log('Menu toggle aria-expanded:', menuToggle.getAttribute('aria-expanded'));
+            }
+            
+            if (navLinks) {
+                console.log('Nav links classes:', navLinks.className);
+                console.log('Nav links transform:', window.getComputedStyle(navLinks).transform);
+            }
+        }
+        
+        // Update viewport width on load and resize
+        window.addEventListener('load', updateViewportWidth);
+        window.addEventListener('resize', updateViewportWidth);
+        
+        // Check elements after a delay
+        setTimeout(checkElements, 2000);
+    </script>
+</body>
+</html> 
