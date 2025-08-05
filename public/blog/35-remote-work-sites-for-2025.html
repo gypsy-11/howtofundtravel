@@ -679,9 +679,8 @@
                         const data = await response.json();
                         
                         if (response.ok) {
-                            messageDiv.textContent = 'Perfect! Your bookmarks file is on its way. Check your inbox!';
-                            messageDiv.className = 'form-message success';
-                            document.getElementById('bookmarksEmail').value = ''; // Clear the form
+                            // Success - redirect to thank you page like the first form
+                            window.location.href = data.redirectUrl || '/thank-you-job-bookmarks.html';
                         } else {
                             messageDiv.textContent = data.message || 'Something went wrong. Please try again.';
                             messageDiv.className = 'form-message error';
