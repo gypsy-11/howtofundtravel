@@ -148,7 +148,7 @@
                     <div class="blog-hero-text">
                         <div class="blog-post-meta">
                             <span class="blog-post-category">Remote Work</span>
-                            <time datetime="2024-01-01">January 1, 2024</time>
+                            <time datetime="2024-01-01">August 8, 2023</time>
                             <span class="read-time">8 min read</span>
                         </div>
                         <h1>How Remote Work Funds Our Family's Adventures (and Can Fund Yours Too!)</h1>
@@ -267,6 +267,31 @@
                         <!-- Course Links Container -->
                         <div id="course-links-container"></div>
                     </section>
+
+                    <!-- Get All Links Section -->
+                    <section class="blog-section">
+                        <div class="newsletter-section" style="text-align: center;">
+                            <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                                <div class="newsletter-content" style="text-align: left; max-width: none;">
+                                    <h2 style="margin-bottom: 1.5rem; text-align: left;">Download 35 Remote Work Links in One Handy File</h2>
+                                    <p class="newsletter-tagline" style="font-size: 1.125rem; line-height: 1.6; margin-bottom: 2rem; text-align: left;">Looking for remote work opportunities? Download our free Job Sites Bookmarks file and import 35+ remote job platforms into your browser bookmarks with one click!</p>
+                                </div>
+                                
+                                <div style="text-align: center;">
+                                    <form id="bookmarksDownloadForm" class="newsletter-form" style="max-width: 400px; margin: 0 auto; text-align: center;">
+                                        <div class="form-group" style="text-align: center; flex-direction: column; gap: 1rem;">
+                                            <input type="email" id="bookmarksEmail" class="form-input" placeholder="Your email address" required style="text-align: center;">
+                                            <button type="submit" id="bookmarks-submit-btn" class="btn btn-primary btn-large">Download Bookmarks</button>
+                                        </div>
+                                        <div id="bookmarks-message" class="form-message" style="display: none; text-align: center;"></div>
+                                        <div class="form-privacy" style="margin-top: 1.5rem; text-align: center;">
+                                            <small>🔒 Your email is safe. I'll only send you remote work tips and opportunities. Unsubscribe anytime.</small>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </article>
@@ -274,6 +299,56 @@
 
     <!-- Scripts -->
     <script src="../js/main.js" defer></script>
+    
+    <!-- Lead Magnet Form Handler -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const bookmarksDownloadForm = document.getElementById('bookmarksDownloadForm');
+            
+            if (bookmarksDownloadForm) {
+                bookmarksDownloadForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const email = document.getElementById('bookmarksEmail').value;
+                    const submitButton = document.getElementById('bookmarks-submit-btn');
+                    const messageDiv = document.getElementById('bookmarks-message');
+                    
+                    // Show loading state
+                    submitButton.textContent = 'Sending...';
+                    submitButton.disabled = true;
+                    messageDiv.style.display = 'none';
+                    
+                    try {
+                        const response = await fetch('/api/job-bookmarks-lead-magnet', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({ email: email })
+                        });
+                        
+                        const data = await response.json();
+                        
+                        if (response.ok) {
+                            // Success - redirect to thank you page
+                            window.location.href = data.redirectUrl || '/thank-you-job-bookmarks.html';
+                        } else {
+                            messageDiv.textContent = data.message || 'Something went wrong. Please try again.';
+                            messageDiv.className = 'form-message error';
+                        }
+                    } catch (error) {
+                        messageDiv.textContent = 'Network error. Please try again.';
+                        messageDiv.className = 'form-message error';
+                    }
+                    
+                    // Reset button and show message
+                    submitButton.textContent = 'Download Bookmarks';
+                    submitButton.disabled = false;
+                    messageDiv.style.display = 'block';
+                });
+            }
+        });
+    </script>
     
     <!-- Link System Initialization -->
     <script>
