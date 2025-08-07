@@ -173,29 +173,63 @@
 
     <script>
         document.getElementById('downloadBookmarks').addEventListener('click', function() {
-            // Create a temporary link element
-            const link = document.createElement('a');
-            link.href = 'lead-magnets/ai_tools_bookmarks.html';
-            link.download = 'ai_tools_bookmarks_2025.html';
+            const button = this;
+            const originalText = button.innerHTML;
             
-            // Trigger the download
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            // Show loading state
+            button.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Downloading...';
+            button.disabled = true;
             
-            // Track the download event
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'download', {
-                    'event_category': 'lead_magnet',
-                    'event_label': 'ai_tools_bookmarks',
-                    'value': 1
+            // Fetch the file content
+            fetch('https://howtofund.travel/lead-magnets/ai_tools_bookmarks.html')
+                .then(response => response.text())
+                .then(content => {
+                    // Create a blob with the content
+                    const blob = new Blob([content], { type: 'text/html' });
+                    const url = window.URL.createObjectURL(blob);
+                    
+                    // Create download link
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'ai_tools_bookmarks_2025.html';
+                    
+                    // Trigger download
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    
+                    // Clean up
+                    window.URL.revokeObjectURL(url);
+                    
+                    // Track the download event
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'download', {
+                            'event_category': 'lead_magnet',
+                            'event_label': 'ai_tools_bookmarks',
+                            'value': 1
+                        });
+                    }
+                    
+                    // Show success message
+                    button.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Downloaded Successfully!';
+                    button.classList.add('btn-success');
+                })
+                .catch(error => {
+                    console.error('Download failed:', error);
+                    // Reset button on error
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                    button.classList.remove('btn-success');
+                    
+                    // Fallback: try direct link
+                    const link = document.createElement('a');
+                    link.href = 'https://howtofund.travel/lead-magnets/ai_tools_bookmarks.html';
+                    link.download = 'ai_tools_bookmarks_2025.html';
+                    link.target = '_blank';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
                 });
-            }
-            
-            // Show success message
-            this.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Downloaded Successfully!';
-            this.disabled = true;
-            this.classList.add('btn-success');
         });
     </script>
 </body>

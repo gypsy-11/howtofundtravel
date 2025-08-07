@@ -25,4 +25,12 @@
 
 /lead-magnets/*
   Content-Disposition: attachment
-  Cache-Control: public, max-age=86400 
+  Cache-Control: public, max-age=86400
+
+/lead-magnets/*.html
+  Content-Type: text/html
+  Content-Disposition: attachment; filename="ai_tools_bookmarks.html"
+
+/lead-magnets/*.bookmarks
+  Content-Type: text/html
+  Content-Disposition: attachment; filename="ai_tools_bookmarks.bookmarks" 
