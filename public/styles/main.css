@@ -1345,9 +1345,6 @@ body.nav-open .site-header {
   
   .mobile-menu-toggle {
     display: block;
-    /* Debug: Make hamburger more visible */
-    background-color: rgba(255, 0, 0, 0.1);
-    border: 1px solid red;
   }
   
   .nav-links {
@@ -1437,8 +1434,6 @@ body.nav-open .site-header {
   
   .nav-links.active {
     transform: translateX(0);
-    /* Debug: Add a border to make it more visible */
-    border: 2px solid red;
   }
   
   /* Prevent body scroll when mobile menu is open */
@@ -1483,6 +1478,24 @@ body.nav-open .site-header {
   
   .newsletter-section .container {
     gap: var(--space-xl);
+    grid-template-columns: 1fr;
+  }
+  
+  .newsletter-image {
+    display: none;
+  }
+  
+  .form-group {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .form-input {
+    width: 100%;
+  }
+  
+  .btn-large {
+    width: 100%;
   }
   
   .footer-links {
