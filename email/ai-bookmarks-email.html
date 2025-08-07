@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your AI Tools Bookmarks Are Ready! - How to Fund Travel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #264653;
+            background-color: #F8F9FA;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Email container */
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        /* Header */
+        .header {
+            background: url('https://storage.mlcdn.com/account_image/1706534/Q03MkOjBQsQ3XZXAofgSrFhHrmvy5N1u1zgKl1QJ.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 60px 30px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #264653;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .header p {
+            color: #264653;
+            font-size: 20px;
+            font-weight: 500;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Main content */
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .welcome-section {
+            margin-bottom: 40px;
+        }
+        
+        .welcome-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #264653;
+            margin-bottom: 20px;
+        }
+        
+        .welcome-section p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #547B8E;
+            margin-bottom: 15px;
+        }
+        
+        /* Download section */
+        .download-section {
+            background-color: #FDF8F3;
+            border: 2px solid #E5E7EB;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .download-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #264653;
+            margin-bottom: 15px;
+        }
+        
+        .download-section p {
+            color: #547B8E;
+            margin-bottom: 25px;
+        }
+        
+        .download-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #3BAEA0 0%, #2A9D8F 100%);
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        /* Benefits list */
+        .benefits-list {
+            background-color: #F8F9FA;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .benefits-list h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #264653;
+            margin-bottom: 15px;
+        }
+        
+        .benefits-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .benefits-list li {
+            color: #547B8E;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .benefits-list li:before {
+            content: "✓";
+            color: #3BAEA0;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Pro tip section */
+        .pro-tip {
+            background-color: #F8F9FA;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .pro-tip h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #264653;
+            margin-bottom: 10px;
+        }
+        
+        .pro-tip p {
+            color: #264653;
+            font-weight: 500;
+        }
+        
+        /* What's next section */
+        .next-section {
+            margin: 40px 0;
+        }
+        
+        .next-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #264653;
+            margin-bottom: 20px;
+        }
+        
+        .next-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .next-section li {
+            color: #547B8E;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .next-section li:before {
+            content: "•";
+            color: #F9C74F;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* CTA section */
+        .cta-section {
+            background-color: #8ED1C9;
+            border: 2px solid #E5E7EB;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #264653;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section p {
+            color: #264653;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #264653;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #1a2f38;
+            transform: translateY(-2px);
+        }
+        
+        /* Questions section */
+        .questions-section {
+            background-color: #F8F9FA;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .questions-section h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #264653;
+            margin-bottom: 10px;
+        }
+        
+        .questions-section p {
+            color: #547B8E;
+        }
+        
+        /* Signature section */
+        .signature {
+            display: flex;
+            align-items: center;
+            margin: 40px 0 20px 0;
+            padding: 20px 0;
+            border-top: 1px solid #E5E7EB;
+        }
+        
+        .profile-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+            border: 3px solid #3BAEA0;
+        }
+        
+        .signature-text {
+            flex: 1;
+        }
+        
+        .signature-text h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #264653;
+            margin-bottom: 5px;
+        }
+        
+        .signature-text p {
+            color: #547B8E;
+            font-size: 14px;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #264653;
+            color: #FFFFFF;
+            padding: 30px;
+            text-align: center;
+            border-radius: 0 0 8px 8px;
+        }
+        
+        .footer p {
+            color: #8ED1C9;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .footer a {
+            color: #8ED1C9;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            color: #FFFFFF;
+        }
+        
+        /* Responsive design */
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            .header {
+                border-radius: 0;
+            }
+            
+            .header h1 {
+                font-size: 28px;
+            }
+            
+            .header p {
+                font-size: 18px;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .download-section,
+            .pro-tip,
+            .cta-section,
+            .questions-section {
+                padding: 20px;
+            }
+            
+            .signature {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-image {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .footer {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🤖 Your AI Tools Bookmarks Are Ready!</h1>
+            <p>56+ AI tools to revolutionize your digital nomad business</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Welcome Section -->
+            <div class="welcome-section">
+                <h2>Hey {subscriber.name},</h2>
+                <p>Thank you for subscribing! You've just joined a community of digital nomads who are revolutionizing their work and businesses with AI.</p>
+                <p><strong>Your AI Tools Bookmark Collection is ready for download!</strong></p>
+            </div>
+            
+            <!-- Download Section -->
+            <div class="download-section">
+                <h3>🤖 Download Your AI Tools Bookmarks</h3>
+                <p>Get instant access to 56+ AI tools that will transform your digital nomad business</p>
+                <a href="https://howtofund.travel/lead-magnets/ai_tools_bookmarks.html" class="download-button" download="AI_Tools_Bookmarks.html">
+                    Download AI Tools Bookmarks
+                </a>
+            </div>
+            
+            <!-- Benefits List -->
+            <div class="benefits-list">
+                <h4>This comprehensive collection will help you:</h4>
+                <ul>
+                    <li>Access 56+ AI tools organized by category and ease of use</li>
+                    <li>Find the perfect AI solutions for your specific business needs</li>
+                    <li>Save time with direct links and pricing information</li>
+                    <li>Start using AI tools immediately with quick-start guides</li>
+                </ul>
+            </div>
+            
+            <!-- Pro Tip -->
+            <div class="pro-tip">
+                <h4>💡 Pro Tip</h4>
+                <p>Start with the tools marked as "Easiest" if you're new to AI, and gradually explore the more advanced options as you get comfortable. Focus on one category at a time to avoid overwhelm!</p>
+            </div>
+            
+            <!-- What's Next -->
+            <div class="next-section">
+                <h3>🚀 What's Next?</h3>
+                <p>You'll receive weekly emails with:</p>
+                <ul>
+                    <li>Practical strategies for funding your travel dreams</li>
+                    <li>Digital nomad business tips and case studies</li>
+                    <li>Remote work opportunities and resources</li>
+                    <li>Mindset shifts and actionable advice for location independence</li>
+                </ul>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h3>🎯 Ready to Take the Next Step?</h3>
+                <p>If you're serious about making this happen, join our community of Vibe Nomads with plenty of free course material and actionable strategies:</p>
+                <a href="https://vibenomads.org" class="cta-button">Join Vibe Nomads</a>
+            </div>
+            
+            <!-- Questions Section -->
+            <div class="questions-section">
+                <h4>💬 Questions?</h4>
+                <p>Just reply to this email if you have any questions about the AI tools or implementing them in your business. I'm here to help!</p>
+            </div>
+            
+            <!-- Signature -->
+            <div class="signature">
+                <img src="https://storage.mlcdn.com/account_image/1706534/PEvayOQ5Gas0K61NMhV809xFDo7gHWIIRJ5OGl9h.png" alt="Melissa - How to Fund Travel" class="profile-image">
+                <div class="signature-text">
+                    <h5>Happy automating!</h5>
+                    <p><strong>Melissa</strong><br>How to Fund Travel</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2025 How to Fund Travel. All rights reserved.</p>
+            <p>
+                <a href="{$unsubscribe}">Unsubscribe</a> | 
+                <a href="https://howtofund.travel/privacy">Privacy Policy</a> | 
+                <a href="mailto:hello@howtofundtravel.com">Contact Us</a>
+            </p>
+            <p>Follow us: <a href="https://instagram.com/fulltimefamilytravel">Instagram</a> | <a href="https://www.linkedin.com/in/melissawiringi/">LinkedIn</a></p>
+        </div>
+    </div>
+</body>
+</html> 
