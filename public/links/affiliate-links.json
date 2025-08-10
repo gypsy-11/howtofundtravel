@@ -120,9 +120,9 @@
       "category": "travel"
     },
     {
-      "id": "roadmap-course",
-      "title": "The Roadmap Course",
-      "url": "/vibe-nomads.html",
+      "id": "nomad-map-course",
+      "title": "The Nomad Map Course",
+      "url": "/the-nomad-map.html",
       "description": "Comprehensive guide to funding your travel lifestyle",
       "category": "courses"
     }
