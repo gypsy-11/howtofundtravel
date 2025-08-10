@@ -72,7 +72,6 @@ Use one of these methods:
 ### Finance
 - `flippa` - Flippa
 - `fiverr` - Fiverr
-- `tiger-invest` - Tiger Invest
 
 ### Crypto
 - `bitrefill` - Bitrefill
@@ -99,7 +98,7 @@ Use one of these methods:
 - `safetywing` - SafetyWing nomad insurance
 
 ### Courses
-- `roadmap-course` - The Roadmap Course
+- `the-nomad-map-course` - The Nomad Map Course
 
 ## Manual Usage
 If you prefer not to use JavaScript, you can manually copy the HTML from `affiliate-links.json` and format it as needed.

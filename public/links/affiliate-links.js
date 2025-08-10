@@ -113,58 +113,82 @@ function loadAffiliateLinks(container, options = {}) {
           linksContainer.appendChild(styledContainer);
         });
       } else {
-        // Create styled container for filtered links
-        const styledContainer = document.createElement('div');
-        styledContainer.className = 'platforms-list';
-        styledContainer.style.cssText = `
-          background: var(--light, #f8f9fa);
-          padding: 2rem;
-          border-radius: var(--radius-lg, 0.5rem);
-          margin: 2rem 0;
-        `;
-        
-        // Create unordered list
-        const ul = document.createElement('ul');
-        ul.style.cssText = `
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        `;
-        
-        // Simply display the filtered links without category headers
-        linksToDisplay.forEach((link, index) => {
-          const li = document.createElement('li');
-          li.style.cssText = `
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--border-color, #dee2e6);
-            font-size: 1.1rem;
-            line-height: 1.6;
-          `;
-          
-          // Remove border from last item
-          if (index === linksToDisplay.length - 1) {
-            li.style.borderBottom = 'none';
-          }
-          
-          const linkElement = document.createElement('a');
-          linkElement.href = link.url;
-          linkElement.target = '_blank';
-          linkElement.style.cssText = `
-            color: var(--primary-color, #0066cc);
-            font-weight: 600;
+        // Special handling for single CTA buttons
+        if (linksToDisplay.length === 1) {
+          const link = linksToDisplay[0];
+          const button = document.createElement('a');
+          button.href = link.url;
+          button.target = '_blank';
+          button.rel = 'noopener noreferrer';
+          button.className = 'btn btn-primary btn-large';
+          button.textContent = 'GET STARTED TODAY';
+          button.style.cssText = `
+            font-size: 20px;
+            padding: 18px 50px;
+            display: inline-block;
             text-decoration: none;
+            border-radius: var(--radius-md, 0.375rem);
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
           `;
-          linkElement.textContent = link.title;
           
-          const description = document.createTextNode(` - ${link.description}`);
+          linksContainer.appendChild(button);
+        } else {
+          // Create styled container for multiple filtered links
+          const styledContainer = document.createElement('div');
+          styledContainer.className = 'platforms-list';
+          styledContainer.style.cssText = `
+            background: var(--light, #f8f9fa);
+            padding: 2rem;
+            border-radius: var(--radius-lg, 0.5rem);
+            margin: 2rem 0;
+          `;
           
-          li.appendChild(linkElement);
-          li.appendChild(description);
-          ul.appendChild(li);
-        });
-        
-        styledContainer.appendChild(ul);
-        linksContainer.appendChild(styledContainer);
+          // Create unordered list
+          const ul = document.createElement('ul');
+          ul.style.cssText = `
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          `;
+          
+          // Simply display the filtered links without category headers
+          linksToDisplay.forEach((link, index) => {
+            const li = document.createElement('li');
+            li.style.cssText = `
+              padding: 0.75rem 0;
+              border-bottom: 1px solid var(--border-color, #dee2e6);
+              font-size: 1.1rem;
+              line-height: 1.6;
+            `;
+            
+            // Remove border from last item
+            if (index === linksToDisplay.length - 1) {
+              li.style.borderBottom = 'none';
+            }
+            
+            const linkElement = document.createElement('a');
+            linkElement.href = link.url;
+            linkElement.target = '_blank';
+            linkElement.style.cssText = `
+              color: var(--primary-color, #0066cc);
+              font-weight: 600;
+              text-decoration: none;
+            `;
+            linkElement.textContent = link.title;
+            
+            const description = document.createTextNode(` - ${link.description}`);
+            
+            li.appendChild(linkElement);
+            li.appendChild(description);
+            ul.appendChild(li);
+          });
+          
+          styledContainer.appendChild(ul);
+          linksContainer.appendChild(styledContainer);
+        }
       }
     })
     .catch(error => console.error('Error loading affiliate links:', error));
