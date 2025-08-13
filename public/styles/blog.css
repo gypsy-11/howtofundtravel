@@ -25,12 +25,15 @@
 .blog-hero {
     position: relative;
     padding: 0; /* Remove padding to use absolute positioning */
+    /* Prefer WebP with PNG fallback */
     background: url('../images/ocean-shores-transparency.png') no-repeat center center;
     background-size: cover;
     min-height: 60vh;
     color: var(--dark);
     margin-top: 0; /* Ensure no margin to prevent gaps */
 }
+
+/* WebP override disabled: asset not present. Using PNG default. */
 
 /* Remove the dark overlay */
 /* .blog-hero::before {
@@ -56,6 +59,15 @@
     padding: 2.5rem; /* Increased padding for better spacing */
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
+}
+
+@media (min-width: 1024px) {
+    .blog-hero {
+        min-height: 85vh;
+    }
+    .blog-hero-content {
+        top: 20%;
+    }
 }
 
 .blog-hero-text {
@@ -134,6 +146,36 @@
     margin: 0 auto;
     padding: 0 1rem;
     margin-top: 4rem; /* Add top margin to create space between hero and body content */
+}
+
+/* Heading spacing rhythm inside blog content */
+.blog-post-body h2 {
+    margin-top: 2.5rem;
+}
+
+.blog-post-body h3 {
+    margin-top: 2rem;
+}
+
+.blog-post-body h4 {
+    margin-top: 1.25rem;
+}
+
+/* Avoid extra space on the very first heading in the first content section */
+.blog-post-body .container .blog-section:first-of-type h2:first-child {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .blog-post-body h2 {
+        margin-top: 2rem;
+    }
+    .blog-post-body h3 {
+        margin-top: 1.25rem;
+    }
+    .blog-post-body h4 {
+        margin-top: 1rem;
+    }
 }
 
 /* Blog Sections */
@@ -1868,3 +1910,133 @@
         font-size: 0.8rem;
     }
 } 
+
+/* List styling inside blog content */
+.blog-post-body ul,
+.blog-post-body ol {
+    margin: 1rem 0 1.5rem;
+    padding-left: 1.25rem;
+}
+
+.blog-post-body ul {
+    list-style: disc;
+}
+
+.blog-post-body ol {
+    list-style: decimal;
+}
+
+.blog-post-body li {
+    margin-bottom: 0.5rem;
+}
+
+.blog-post-body ul ul,
+.blog-post-body ol ol,
+.blog-post-body ul ol,
+.blog-post-body ol ul {
+    margin-top: 0.5rem;
+}
+
+/* Blockquote styling inside blog content */
+.blog-post-body blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid var(--primary-color);
+    background-color: var(--light);
+    color: var(--dark);
+    font-style: italic;
+}
+
+.blog-post-body blockquote p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .blog-post-body ul,
+    .blog-post-body ol {
+        margin: 0.75rem 0 1.25rem;
+        padding-left: 1rem;
+    }
+    .blog-post-body li {
+        margin-bottom: 0.4rem;
+    }
+    .blog-post-body blockquote {
+        padding: 0.875rem 1rem;
+    }
+} 
+
+/* Inline Lead CTA - subtle, compact */
+.inline-lead-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: var(--white);
+    margin: 1.5rem 0;
+}
+
+.inline-lead-cta p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--dark);
+}
+
+.inline-lead-cta .btn {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .inline-lead-cta {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+        padding: 0.875rem 1rem;
+    }
+    .inline-lead-cta .btn {
+        width: 100%;
+    }
+} 
+
+/* Remove bottom spacing under newsletter CTA on blog index */
+.blog-index .blog-newsletter-cta {
+    margin-bottom: 0;
+} 
+
+/* Inline blog figures */
+.blog-inline-image {
+	margin: 1.5rem 0;
+	text-align: center;
+}
+.blog-inline-image img {
+	max-width: 100%;
+	height: auto;
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-md);
+}
+.blog-inline-image .image-caption {
+	margin-top: 0.5rem;
+	font-size: 0.95rem;
+	color: var(--medium);
+} 
+
+/* Callout boxes */
+.callout {
+	margin: 1.25rem 0;
+	padding: 1rem 1rem 1rem 1.25rem;
+	background: var(--surface, #ffffff);
+	border-left: 4px solid var(--primary-color);
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-sm);
+}
+.callout strong {
+	display: block;
+	margin-bottom: 0.25rem;
+}
+.callout.tip { border-left-color: var(--primary-color); }
+.callout.note { border-left-color: var(--secondary-color, #2A9D8F); }
+.callout.warning { border-left-color: #e76f51; }
+.callout ul { margin: 0.5rem 0 0 1rem; }
+.callout li { margin: 0.25rem 0; } 

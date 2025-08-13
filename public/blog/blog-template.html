@@ -138,35 +138,85 @@
     <script src="../links/include-disclaimer.js" defer></script>
 </head>
 <body class="blog-post">
-    <!-- Header and Footer will be automatically included by template-includes.js -->
-    
     <main id="main-content">
         <article class="blog-post-content">
-            <!-- Blog Post Header Section -->
-            <header class="blog-post-header">
-                <div class="container">
-                    <div class="blog-post-meta">
-                        <span class="blog-post-category">Category</span>
-                        <time datetime="2024-01-01">January 1, 2024</time>
-                        <span class="read-time">5 min read</span>
-                    </div>
-                    <h1>Your Blog Post Title</h1>
-                    <div class="blog-post-excerpt">
-                        <p>Your blog post excerpt or description goes here. This should be a compelling summary that draws readers in.</p>
+            <!-- Blog Post Hero Section -->
+            <section class="blog-hero">
+                <div class="blog-hero-content">
+                    <div class="blog-hero-text">
+                        <div class="blog-post-meta">
+                            <span class="blog-post-category">Category</span>
+                            <time datetime="2024-01-01">January 1, 2024</time>
+                            <span class="read-time">5 min read</span>
+                        </div>
+                        <h1>Your Blog Post Title</h1>
+                        <div class="blog-hero-subtitle">
+                            <p>Your blog post excerpt or description goes here. This should be a compelling summary that draws readers in.</p>
+                        </div>
                     </div>
                 </div>
-            </header>
+            </section>
 
             <!-- Blog Post Body -->
             <div class="blog-post-body">
                 <div class="container">
-                    <!-- Featured Image Section (optional) -->
-                    <div class="featured-image-section">
+                    <!-- Introduction Section -->
+                    <section class="blog-section">
+                        <p>Your introduction content goes here. This is where you'll write the opening of your blog post.</p>
+                    </section>
+
+                    <!-- Featured Image Section -->
+                    <section class="blog-section featured-image-section">
                         <div class="featured-image-container">
                             <img src="../images/blog/your-featured-image.jpg" alt="Featured image description" class="featured-image">
-                            <p class="image-caption">Optional image caption</p>
+                            <div class="image-caption">
+                                <p>Optional image caption</p>
+                            </div>
                         </div>
-                    </div>
+                    </section>
+
+                    <!-- Lead Magnet Section (Optional) -->
+                    <section class="blog-section lead-magnet-section">
+                        <div class="lead-magnet-container">
+                            <div class="lead-magnet-content">
+                                <div class="lead-magnet-icon">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <h2>Get Your Free [Resource Name]</h2>
+                                <p><strong>Skip the research!</strong> [Your compelling value proposition here].</p>
+                                
+                                <div class="lead-magnet-benefits">
+                                    <h3>What you'll get:</h3>
+                                    <ul>
+                                        <li>✅ Benefit 1</li>
+                                        <li>✅ Benefit 2</li>
+                                        <li>✅ Benefit 3</li>
+                                        <li>✅ Benefit 4</li>
+                                    </ul>
+                                </div>
+                                
+                                <form id="leadMagnetForm" class="lead-magnet-form">
+                                    <div class="form-group">
+                                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-large">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <polyline points="7,10 12,15 17,10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        Download [Resource Name]
+                                    </button>
+                                </form>
+                                
+                                <div class="lead-magnet-footer">
+                                    <p><small>🔒 Your email is safe. I'll only send you [relevant topic] tips and strategies. Unsubscribe anytime.</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
                     <!-- Main Content Sections -->
                     <section class="blog-section">

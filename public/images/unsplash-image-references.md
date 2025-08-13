@@ -45,6 +45,16 @@ This file contains curated Unsplash image links organized by category for easy r
   - ID: `ol3BEOFEIlg`
   - Perfect for: Remote work setup, productivity, workspace
 
+- **Time Blocking Calendar** - Calendar and planner on desk, time blocking view
+  - URL: https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=1736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+  - Saved as: `public/images/time-blocking-calendar.jpg`
+  - Perfect for: Time blocking, scheduling, productivity
+
+- **Workspace Setup While Traveling** - Minimal workspace with laptop in natural setting
+  - URL: https://images.unsplash.com/photo-1657524433787-a30cefc92661?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+  - Saved as: `public/images/workspace-setup-travel.jpg`
+  - Perfect for: Remote work setup, accommodation workspace examples
+
 ## 🏖️ Travel & Lifestyle
 
 ### Beach Lifestyle
@@ -117,7 +127,7 @@ All URLs provided are for the "regular" size (1080px width). For other sizes, yo
 ## 🎯 Recommended for Specific Blog Topics
 
 ### Remote Work Posts
-- Use: Beach Digital Nomad, Mountain Digital Nomad, Digital Nomad Workspace
+- Use: Beach Digital Nomad, Mountain Digital Nomad, Digital Nomad Workspace, Time Blocking Calendar, Workspace Setup While Traveling
 
 ### Mindset Posts
 - Use: "I Am Enough", "Reach Out to the World", Mountain Achievement
@@ -130,5 +140,5 @@ All URLs provided are for the "regular" size (1080px width). For other sizes, yo
 
 ---
 
-*Last updated: December 2024*
+*Last updated: August 2025*
 *Source: Unsplash.com* 

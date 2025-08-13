@@ -146,7 +146,7 @@ fetch(linksPath)
 ## 🔍 Testing Recommendations
 
 ### Manual Testing Checklist
-- [ ] Test from root directory (e.g., `/the-roadmap.html`)
+- [ ] Test from root directory (e.g., `/the-nomad-map.html`)
 - [ ] Test from blog subdirectory (e.g., `/blog/fundtravelremotework.html`)
 - [ ] Test with all link types loaded
 - [ ] Test with filtered links

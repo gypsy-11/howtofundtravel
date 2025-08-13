@@ -49,7 +49,7 @@ Use one of these methods:
 - `hubspot-certifications` - HubSpot Certifications
 - `linkedin-digital-marketing` - LinkedIn Learning - Master Digital Marketing
 - `systemeio-academy` - SystemeIO Academy
-- `the-roadmap` - The Roadmap
+- `the-nomad-map` - The Nomad Map
 
 ## Manual Usage
 If you prefer not to use JavaScript, you can manually copy the HTML from `course-links.json` and format it as needed.
