@@ -99,3 +99,10 @@ The template system automatically adjusts paths based on page location:
 ### Navigation not working?
 - Ensure `js/main.js` is loaded for mobile menu
 - Check that `template-includes.js` loaded successfully 
+
+## Robots.txt strategy (AI-friendly)
+
+- We keep a single `User-agent: *` group with `Allow: /` plus directory-specific `Disallow` rules. This prevents precedence/override issues that can happen with multiple user-agent blocks.
+- Common AI and extended crawlers are documented as comments only in `public/robots.txt` and inherit the same global rules. No per-bot directives are required when allowing AI access sitewide.
+- File of record: `public/robots.txt`. Prefer updating comments there for documentation. Only add per-bot directives if you intend to change policy for specific crawlers.
+- If policy changes to restrict AI training in the future, update `robots.txt` with targeted `Disallow` blocks and optionally add `X-Robots-Tag: noai, noimageai` in `public/_headers`. 
