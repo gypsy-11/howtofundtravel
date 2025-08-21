@@ -13,7 +13,7 @@ class TemplateManager {
         
         // For local development (localhost or file://)
         if (hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '') {
-            if (path.includes('/blog/')) {
+            if (path.includes('/blog/') || path.includes('/case-studies/')) {
                 return '../';
             } else if (path === '/' || path === '/index.html' || path.endsWith('.html')) {
                 return './';
@@ -115,6 +115,7 @@ class TemplateManager {
                         <ul class="nav-links">
                             <li><a href="${this.basePath}" data-nav="home">Home</a></li>
                             <li><a href="${this.basePath}blog/" data-nav="blog">Blog</a></li>
+                            <li><a href="${this.basePath}case-studies/" data-nav="case-studies">Case Studies</a></li>
                             <li><a href="${this.basePath}about.html" data-nav="about">About Me</a></li>
                         </ul>
                         
@@ -252,6 +253,8 @@ class TemplateManager {
             if (currentPath === '/' && navType === 'home') {
                 link.classList.add('active');
             } else if (currentPath.startsWith('/blog/') && navType === 'blog') {
+                link.classList.add('active');
+            } else if (currentPath.startsWith('/case-studies/') && navType === 'case-studies') {
                 link.classList.add('active');
             } else if (currentPath.includes('about') && navType === 'about') {
                 link.classList.add('active');
