@@ -122,7 +122,7 @@ Zoom: Recurring links + meeting templates. I test audio once, then reuse. Keeps 
 Loom: Async status updates and pre‑reads. I send “weekly recap” Looms so we can cancel half the live calls.
 UnDistracted: Blocks social and inbox during golden hours. I schedule it to flip on before sunrise.
 Notion board (to‑do): Simple kanban with tags for “TZ overlap,” “Golden Hour,” and “Async.” Daily view = 3 must‑ships max.
-Coda (ownership + raise): One page that tracks shipped work, impact, and weekly wins. Easy to share for accountability—and to make a clean, data‑driven raise request.
+[Coda](https://coda.partnerlinks.io/agrv878j6von) (ownership + raise): One page that tracks shipped work, impact, and weekly wins. Easy to share for accountability—and to make a clean, data‑driven raise request.
 Case Study: US clients while we traveled Europe (what actually worked)
 My favorite season was working “Asian hours” while we explored Turkey, Greece, and Spain. I started around 4 a.m. and wrapped by midday. Afternoons were for towns and beaches, and honestly, those are some of my best travel memories.
 What made it sustainable:
@@ -227,7 +227,7 @@ Zoom fallback: switch to audio‑only, turn off HD, record a Loom afterward if n
 Productivity Tools for Parents (focus by default)
 UnDistracted: blocks social/inbox during golden hours on a schedule
 Notion board: simple kanban with tags for “Golden Hour,” “TZ Overlap,” “Async”
-Coda page: track shipped work, impact, and weekly wins—great for accountability and clean, data‑driven raise conversations
+[Coda](https://coda.partnerlinks.io/agrv878j6von) page: track shipped work, impact, and weekly wins—great for accountability and clean, data‑driven raise conversations
 Communication Tools (fewer meetings, clearer collaboration)
 Slack for quick huddles and status; WhatsApp/Signal/Telegram for family/community
 Zoom for recurring calls; meeting templates so 4–5 a.m. starts go smoothly

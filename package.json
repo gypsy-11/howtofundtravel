@@ -4,8 +4,8 @@
   "description": "How to Fund Travel - Location Independence for Families",
   "main": "index.html",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "echo 'No build step required for static HTML'",
+    "dev": "cd astro-site && npm run dev",
+    "build": "cd astro-site && npm run build",
     "deploy": "vercel --prod"
   },
   "keywords": [
